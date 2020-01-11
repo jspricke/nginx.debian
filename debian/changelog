@@ -1,3 +1,10 @@
+nginx (1.10.3-1+deb9u4) stretch-security; urgency=high
+
+  * Handle CVE-2019-20372, error page request smuggling
+    (Closes: #948579)
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Sat, 11 Jan 2020 09:28:05 +0200
+
 nginx (1.10.3-1+deb9u3) stretch-security; urgency=high
 
   * Backport upstream fixes for 3 CVEs (Closes: #935037)
