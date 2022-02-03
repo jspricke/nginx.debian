@@ -48,7 +48,7 @@ sub nginx_modules_conf_installdir
 
 =head1 SYNOPSIS
 
-B<dh_nginx> [S<I<debhelper options>>] [B<-n>|B<--noscripts>]
+B<dh_nginx> [S<I<debhelper options>>] [B<-n>|B<--noscripts>] [B<--in-nginx-tree>]
 
 =head1 DESCRIPTION
 
@@ -62,6 +62,8 @@ It supports the following configuration types
 
 =item *
 Nginx modules
+
+=back
 
 =head1 INVOCATION
 
@@ -128,6 +130,10 @@ configuration by default.
 
 Do not modify F<postinst>/F<postrm>/F<prerm> maintainer scripts.
 
+=item B<--in-nginx-tree>
+
+Specify this option when building in-tree modules along with nginx. When
+specified, nginx abi version is not required in package name.
 
 =back
 
@@ -150,8 +156,11 @@ dh_nginx is heavily influnced by dh_apache2 written by Arno Toell
 ## main code starts here
 ##
 
+my $nginx_in_tree;
+
 init(options => {
 	"e|noenable" => \$dh{NOENABLE},
+	"in-nginx-tree" => \$nginx_in_tree,
 });
 
 foreach my $package ((@{$dh{DOPACKAGES}}))
@@ -231,7 +240,12 @@ foreach my $package ((@{$dh{DOPACKAGES}}))
                 {
                         warning("Package $package appears to be an Nginx module. It should comply to the package naming scheme libnginx-mod-<modulename>\n");
                 }
-                addsubstvar($package, "misc:Depends", nginx_depends());
+                if ($nginx_in_tree){
+                            addsubstvar($package, "misc:Depends", nginx_depends());
+                } else {
+                            my $ngx_ver = `grep 'define NGINX_VERSION' /usr/share/nginx/src/src/core/nginx.h | sed -e 's/^.*"\\(.*\\)".*/\\1/'`;
+                            addsubstvar($package, "misc:Depends", "nginx-common (>= $ngx_ver), nginx-common (<< $ngx_ver.1~)");
+                }
 
                 my $modules = "";
                 foreach my $module (@{$PACKAGE_TYPE{'has_a_module'}})
