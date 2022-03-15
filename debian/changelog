@@ -1,3 +1,10 @@
+nginx (1.18.0-8) unstable; urgency=medium
+
+  * Restore patch:
+    d/p/Resolver-fixed-off-by-one-write-in-ngx_resolver_copy.patch
+
+ -- Ondřej Nový <onovy@debian.org>  Tue, 15 Mar 2022 13:23:06 +0100
+
 nginx (1.18.0-7) unstable; urgency=medium
 
   [ Ondřej Nový ]
@@ -22,6 +29,14 @@ nginx (1.18.0-7) unstable; urgency=medium
     SIGQUIT instead of SIGSTOP (LP: #1919965).
 
  -- Ondřej Nový <onovy@debian.org>  Tue, 15 Mar 2022 11:50:18 +0100
+
+nginx (1.18.0-6.1) unstable; urgency=high
+
+  * Non-maintainer upload.
+  * Resolver: fixed off-by-one write in ngx_resolver_copy() (CVE-2021-23017)
+    (Closes: #989095)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 29 May 2021 16:21:37 +0200
 
 nginx (1.18.0-6) unstable; urgency=medium
 
