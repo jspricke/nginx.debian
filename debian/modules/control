@@ -70,5 +70,5 @@ Patch: dynamic-module.patch
 Module: rtmp
 Homepage: https://github.com/arut/nginx-rtmp-module
 Files-Excluded: test
-Version: 1.2.1
+Version: 1.2.2
 
