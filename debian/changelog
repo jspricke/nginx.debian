@@ -1,3 +1,11 @@
+nginx (1.18.0-9) UNRELEASED; urgency=medium
+
+  * http-lua: Downgrade to 0.10.13 (Closes: #1008787).
+  * http-lus: Backport upstream bugfix for segfault in nginx core >= 1.15.0 when
+    libnginx-mod-http-lua is loaded and init_worker_by_lua* is used.
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 05 Apr 2022 19:11:47 +0200
+
 nginx (1.18.0-8) unstable; urgency=medium
 
   * Restore patch:
