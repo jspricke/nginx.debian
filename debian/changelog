@@ -11,6 +11,8 @@ nginx (1.18.0-9) UNRELEASED; urgency=medium
   * d/watch: Update watch syntax to match all even versions of NGINX releases
     rather than use a watch syntax that is static to one specific version.
     This will fix the untracked "New upstream stable versions" problem.
+  * d/control: Update 'uploaders' as Thomas Ward is now a maintainer in 
+    the Salsa repository.
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 05 Apr 2022 19:11:47 +0200
 
