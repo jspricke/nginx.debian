@@ -1,4 +1,4 @@
-nginx (1.18.0-9) UNRELEASED; urgency=medium
+nginx (1.18.0-9) unstable; urgency=medium
 
   [ Jan Mojžíš ]
   * http-lua: Downgrade to 0.10.13 (Closes: #1008787).
