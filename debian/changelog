@@ -9,6 +9,9 @@ nginx (1.20.2-1) UNRELEASED; urgency=medium
     in-all-nginx-buil.patch (fuzz thanks to 1.20.2)
   * d/conf/mime.types: Update mime.types to more match upstream mime.types
     and include upstream changes with mime.types from 1.20.2.
+  * d/control: Remove self from Uploaders per other Debian devs, who want 
+    that commit to be done by someone on the current uploaders/maintainers
+    group instead.
 
  -- Thomas Ward <teward@ubuntu.com>  Tue, 19 Apr 2022 09:50:42 -0400
 
