@@ -5,7 +5,9 @@ nginx (1.20.2-1) UNRELEASED; urgency=medium
   * d/patches/Resolver-fixed-off-by-one-write-in-ngx_resolver
     _copy.patch: Drop CVE-2021-23017 patch, as this is fixed in 1.20.1
     and we are now using 1.20.2 which already contains the patch.
-  
+  * Refreshed d/patches/0002-Make-sure-signature-stays-the-same-
+    in-all-nginx-buil.patch (fuzz thanks to 1.20.2)
+
  -- Thomas Ward <teward@ubuntu.com>  Tue, 19 Apr 2022 09:50:42 -0400
 
 nginx (1.18.0-9) unstable; urgency=medium
