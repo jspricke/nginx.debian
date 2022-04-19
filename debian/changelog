@@ -8,7 +8,8 @@ nginx (1.20.2-1) UNRELEASED; urgency=medium
   * Refreshed d/patches/0002-Make-sure-signature-stays-the-same-
     in-all-nginx-buil.patch (fuzz thanks to 1.20.2)
   * d/conf/mime.types: Update mime.types to more match upstream mime.types
-    and include upstream changes with mime.types from 1.20.2.
+    and include upstream changes with mime.types from 1.21.x via nginx.org
+    mercurial repository versions.
   * d/control: Remove self from Uploaders per other Debian devs, who want 
     that commit to be done by someone on the current uploaders/maintainers
     group instead.
