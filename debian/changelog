@@ -1,4 +1,4 @@
-nginx (1.20.2-1) UNRELEASED; urgency=medium
+nginx (1.20.2-1) unstable; urgency=medium
 
   * This is an NGINX Maintainer Team upload.
   * Update to latest upstream Stable version (1.20.2) (Closes: #1008855)
