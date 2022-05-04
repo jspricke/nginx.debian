@@ -5,6 +5,7 @@ Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.
 Uploaders: Christos Trochalakis <ctrochalakis@debian.org>,
            Ondřej Nový <onovy@debian.org>,
            Thomas Ward <teward@ubuntu.com>,
+           Jan Mojžíš <jan.mojzis@gmail.com>,
 Build-Depends: debhelper-compat (= 13),
                dpkg-dev (>= 1.15.5),
                libexpat-dev,
