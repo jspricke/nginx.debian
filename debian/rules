@@ -143,7 +143,7 @@ override_dh_clean:          clean_patch_modules $(foreach flavour,$(FLAVOURS),cl
 
 override_dh_install:
 	dh_install
-	DH_AUTOSCRIPTDIR=$(CURDIR)/debian/autoscripts debian/dh_nginx --in-nginx-tree
+	DH_AUTOSCRIPTDIR=$(CURDIR)/debian/autoscripts debian/debhelper/dh_nginx --in-nginx-tree
 
 override_dh_installinit:
 	dh_installinit --no-stop-on-upgrade --no-start --name=nginx
@@ -163,7 +163,7 @@ build.src:
 	find $(CURDIR)/src -type f -name '*.h' -printf 'src/%P\0' | tar -C $(CURDIR) --null --files-from - -c | tar -C $(BUILDDIR_src)/ -x
 	if [ -e $(CURDIR)/configure ]; then cp $(CURDIR)/configure $(BUILDDIR_src)/; fi
 	echo "NGX_CONF_FLAGS=(" $(basic_configure_flags) ")" > $(BUILDDIR_src)/conf_flags
-	pod2man debian/dh_nginx > $(BUILDDIR_src)/dh_nginx.1
+	pod2man debian/debhelper/dh_nginx > $(BUILDDIR_src)/dh_nginx.1
 
 strip.arch.%:
 	dh_strip --package=nginx-$(*) -O--dbgsym-migration='nginx-$(*)-dbg (<< 1.10.1-3~)'
