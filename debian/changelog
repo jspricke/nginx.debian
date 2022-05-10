@@ -1,3 +1,10 @@
+nginx (1.20.2-3) UNRELEASED; urgency=medium
+
+  * d/conf/mime.types: Fix a typo in font/woff2 extension in 
+    mime.types.  (Closes: #1010798)
+
+ -- Thomas Ward <teward@ubuntu.com>  Tue, 10 May 2022 12:08:02 -0400
+
 nginx (1.20.2-2) unstable; urgency=medium
 
   [ Thomas Ward ]
