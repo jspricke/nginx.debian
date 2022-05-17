@@ -28,6 +28,9 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
   * d/copyright: added copyright for src/stream/ngx_stream_set_module.c
   * d/copyright: removed copyright for src/http/v2/ngx_http_v2_huff_encode.c
 
+  [ Bastian Germann ]
+  * d/copyright: Update copyright for d/debhelper/*
+
   [ Miao Wang ]
   * dh_nginx: support auto generating module config files
   * adding a new nginx-dev package including necessary headers and debhelper
