@@ -4,6 +4,11 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
   * Additional changes:
     * d/conf/mime.types: Fix a typo in font/woff2 extension in 
       mime.types.  (Closes: #1010798)
+    * d/upstream/signing-key.asc: Additional signing keys observed
+      in upstream (Konstantin Pavlov <k.pavlov@f5.com>) during
+      upstream merge/import by Thomas Ward, additional signing key
+      was added to the keyring while keeping Maxim's key in signing
+      keys as wel.
 
  -- Thomas Ward <teward@ubuntu.com>  Tue, 10 May 2022 12:08:02 -0400
 
