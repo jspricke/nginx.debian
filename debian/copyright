@@ -3,8 +3,8 @@ Upstream-Name: nginx
 Source: https://nginx.org/en/download.html
 
 Files: *
-Copyright: 2002-2019, Igor Sysoev
-           2011-2019, Nginx, Inc.
+Copyright: 2002-2021, Igor Sysoev
+           2011-2022, Nginx, Inc.
                       Maxim Dounin
                       Valentin V. Bartenev
                       Roman Arutyunyan
@@ -13,6 +13,11 @@ License: BSD-2-clause
 
 Files: src/core/ngx_murmurhash.c
 Copyright: Copyright (C) Austin Appleby
+License: BSD-2-clause
+
+Files: src/stream/ngx_stream_set_module.c
+Copyright: Copyright (C) Pavel Pautov
+           Copyright (C) Nginx, Inc.
 License: BSD-2-clause
 
 Files: src/http/modules/ngx_http_scgi_module.c
