@@ -1,5 +1,6 @@
 nginx (1.22.0-1) UNRELEASED; urgency=medium
 
+  [ Thomas Ward ]
   * New upstream release (1.22.0)
   * Additional changes:
     * d/conf/mime.types: Fix a typo in font/woff2 extension in 
@@ -9,6 +10,10 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
       upstream merge/import by Thomas Ward, additional signing key
       was added to the keyring while keeping Maxim's key in signing
       keys as wel.
+
+  [ Jan Mojžíš ]
+  * d/patches/CVE-2021-3618.patch removed, fix is included in new upstream
+  release
 
  -- Thomas Ward <teward@ubuntu.com>  Tue, 10 May 2022 12:08:02 -0400
 
