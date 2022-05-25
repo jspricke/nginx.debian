@@ -3,7 +3,7 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
   [ Thomas Ward ]
   * New upstream release (1.22.0)
   * Additional changes:
-    * d/conf/mime.types: Fix a typo in font/woff2 extension in 
+    * d/conf/mime.types: Fix a typo in font/woff2 extension in
       mime.types.  (Closes: #1010798)
     * d/upstream/signing-key.asc: Additional signing keys observed
       in upstream (Konstantin Pavlov <k.pavlov@f5.com>) during
@@ -21,7 +21,7 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
 nginx (1.20.2-2) unstable; urgency=medium
 
   [ Thomas Ward ]
-  * d/patches/CVE-2021-3618.patch: Include upstream changeset from NGINX 
+  * d/patches/CVE-2021-3618.patch: Include upstream changeset from NGINX
     that adds mitigations into the Mail module for CVE-2021-3618.patch.
     (Closes: #991328)
 
@@ -46,7 +46,7 @@ nginx (1.20.2-1) unstable; urgency=medium
   * d/conf/mime.types: Update mime.types to more match upstream mime.types
     and include upstream changes with mime.types from 1.21.x via nginx.org
     mercurial repository versions.
-  * d/control: Remove self from Uploaders per other Debian devs, who want 
+  * d/control: Remove self from Uploaders per other Debian devs, who want
     that commit to be done by someone on the current uploaders/maintainers
     group instead.
 
@@ -65,7 +65,7 @@ nginx (1.18.0-9) unstable; urgency=medium
   * d/watch: Update watch syntax to match all even versions of NGINX releases
     rather than use a watch syntax that is static to one specific version.
     This will fix the untracked "New upstream stable versions" problem.
-  * d/control: Update 'uploaders' as Thomas Ward is now a maintainer in 
+  * d/control: Update 'uploaders' as Thomas Ward is now a maintainer in
     the Salsa repository.
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 05 Apr 2022 19:11:47 +0200
