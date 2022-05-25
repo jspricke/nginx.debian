@@ -17,6 +17,7 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
   * d/control: removed ppc64el from list of luajit platforms. (Closes: #1011303)
   * d/copyright: bump nginx copyright years
   * d/copyright: added copyright for src/stream/ngx_stream_set_module.c
+  * d/copyright: removed copyright for src/http/v2/ngx_http_v2_huff_encode.c
 
  -- Thomas Ward <teward@ubuntu.com>  Tue, 10 May 2022 12:08:02 -0400
 
