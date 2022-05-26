@@ -69,9 +69,21 @@ Description: small, powerful, scalable web/proxy server - common files
  nginx.
 
 Package: nginx-dev
-Architecture: any
-Depends: ${misc:Depends}, ${S:Build-Depends},
-         nginx-core (= ${binary:Version}) | nginx-light (= ${binary:Version}) | nginx-extras (= ${binary:Version})
+Architecture: all
+Depends: ${misc:Depends},
+         debhelper-compat (= 13),
+         dpkg-dev (>= 1.15.5),
+         libgd-dev,
+         libgeoip-dev,
+         libpcre3-dev,
+         libperl-dev,
+         libssl-dev,
+         libxslt1-dev,
+         po-debconf,
+         quilt,
+         zlib1g-dev,
+         nginx-core (<< ${source:Version}.1~) | nginx-light (<< ${source:Version}.1~) | nginx-extras (<< ${source:Version}.1~),
+         nginx-core (>= ${source:Version}) | nginx-light (>= ${source:Version}) | nginx-extras (>= ${source:Version})
 Description: nginx web/proxy server - development headers
  Nginx ("engine X") is a high-performance web and reverse proxy server
  created by Igor Sysoev. It can be used both as a standalone web server
