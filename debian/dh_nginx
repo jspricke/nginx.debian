@@ -244,6 +244,7 @@ foreach my $package ((@{$dh{DOPACKAGES}}))
                             addsubstvar($package, "misc:Depends", nginx_depends());
                 } else {
                             my $ngx_ver = `grep 'define NGINX_VERSION' /usr/share/nginx/src/src/core/nginx.h | sed -e 's/^.*"\\(.*\\)".*/\\1/'`;
+                            chomp($ngx_ver);
                             addsubstvar($package, "misc:Depends", "nginx-common (>= $ngx_ver), nginx-common (<< $ngx_ver.1~)");
                 }
 
