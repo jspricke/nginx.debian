@@ -13,7 +13,10 @@ License: BSD-2-clause
 
 Files: src/core/ngx_murmurhash.c
 Copyright: Copyright (C) Austin Appleby
-License: BSD-2-clause
+License: public-domain
+ All MurmurHash versions are public domain software, and the author 
+ disclaims all copyright to their code.
+ 
 
 Files: src/stream/ngx_stream_set_module.c
 Copyright: Copyright (C) Pavel Pautov
@@ -65,7 +68,9 @@ License: BSD-4-clause
 
 Files: debian/modules/http-ndk/src/hash/murmurhash2.c
 Copyright: Austin Appleby
-License: BSD-3-clause
+License: public-domain
+ All MurmurHash versions are public domain software, and the author
+ disclaims all copyright to their code.
 
 Files: debian/modules/http-auth-pam/*
 Copyright: 2008-2020, Sergio Talens Oliag

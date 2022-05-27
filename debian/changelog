@@ -9,7 +9,10 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
       in upstream (Konstantin Pavlov <k.pavlov@f5.com>) during
       upstream merge/import by Thomas Ward, additional signing key
       was added to the keyring while keeping Maxim's key in signing
-      keys as wel.
+      keys as well.
+    * d/copyright: Updated copyright for src/core/ngx_murmurhash.c
+      and debian/modules/http-ndk/src/hash/murmurhash2.c to be 
+      public-domain (Closes: #1011936)
 
   [ Jan Mojžíš ]
   * d/patches/CVE-2021-3618.patch removed, fix is included in new upstream
