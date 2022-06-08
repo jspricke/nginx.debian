@@ -17,7 +17,6 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
   [ Jan Mojžíš ]
   * d/patches/CVE-2021-3618.patch removed, fix is included in new upstream
   release
-  * d/control: removed ppc64el from list of luajit platforms. (Closes: #1011303)
   * d/copyright: bump nginx copyright years
   * d/copyright: added copyright for src/stream/ngx_stream_set_module.c
   * d/copyright: removed copyright for src/http/v2/ngx_http_v2_huff_encode.c
