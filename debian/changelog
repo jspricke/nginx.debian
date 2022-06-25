@@ -18,6 +18,8 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
     and due to luajit2 having s390x support, we can use s390x now
     with luajit instead of standard Lua.
     Thanks to Paul Gevers for the heads up on luajit2 supporting s390x.
+  * d/control: Use liblua for ppc64el - src:luajit2 is still not ppc64el
+    stable and there seems to be nobody willing to support it.
 
   [ Jan Mojžíš ]
   * d/patches/CVE-2021-3618.patch removed, fix is included in new upstream
