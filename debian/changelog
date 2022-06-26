@@ -35,7 +35,7 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
   [ Miao Wang ]
   * dh_nginx: support auto generating module config files
   * adding a new nginx-dev package including necessary headers and debhelper
-    scripts to build and package a 3rd party module.
+    scripts to build and package a 3rd party module. (Closes: 985133)
   * d/p/0002-Make-sure-signature-stays-the-same-in-all-nginx-buil.patch
     removed, because feature already implemented with --with-compat configure
     option since 1.11.5
