@@ -11,7 +11,7 @@ nginx (1.22.0-1) UNRELEASED; urgency=medium
       was added to the keyring while keeping Maxim's key in signing
       keys as well.
     * d/copyright: Updated copyright for src/core/ngx_murmurhash.c
-      and debian/modules/http-ndk/src/hash/murmurhash2.c to be 
+      and debian/modules/http-ndk/src/hash/murmurhash2.c to be
       public-domain (Closes: #1011936)
   * d/control: Use libluajit-5.1-dev for s390x.
     Due to src:luajit2 landing in Unstable, superseding src:luajit,
