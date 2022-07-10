@@ -1,3 +1,18 @@
+nginx (1.22.0-2) UNRELEASED; urgency=medium
+
+  * d/nginx-common.nginx.service: added Systemd dependency
+    Wants=network-online.target and updated Systemd "After" dependency to
+    recommended NGINX values, namely:
+    - syslog.target
+    - network-online.target (Closes: 61261) (Closes: 1000406)
+    - remote-fs.target (Closes: 898896)
+    - nss-lookup.target
+  * d/p/0003-define_gnu_source-on-other-glibc-based-platforms.patch: forwarded
+    to upstream (Closes: 859082)
+  * d/t/reboot: added, tests if nginx works after reboot
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Sun, 10 Jul 2022 07:58:44 +0200
+
 nginx (1.22.0-1) unstable; urgency=medium
 
   [ Thomas Ward ]

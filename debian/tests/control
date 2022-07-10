@@ -125,3 +125,7 @@ Depends: nginx-extras,
          libnginx-mod-stream-geoip,
          libnginx-mod-stream-geoip2,
          libnginx-mod-stream,
+
+Tests: reboot
+Restrictions: isolation-container, needs-root, needs-reboot
+Depends: nginx-light, curl
