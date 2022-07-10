@@ -1,4 +1,4 @@
-nginx (1.22.0-1) UNRELEASED; urgency=medium
+nginx (1.22.0-1) unstable; urgency=medium
 
   [ Thomas Ward ]
   * New upstream release (1.22.0)
