@@ -13,7 +13,7 @@
 [Unit]
 Description=A high performance web server and a reverse proxy server
 Documentation=man:nginx(8)
-After=syslog.target network-online.target remote-fs.target nss-lookup.target
+After=network-online.target remote-fs.target nss-lookup.target
 Wants=network-online.target
 
 [Service]
