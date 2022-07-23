@@ -398,6 +398,22 @@ Description: Nginx Development Kit module
  features that are seen from a user's point of view - it's just designed to help
  reduce the code that Nginx module developers need to write.
 
+Package: libnginx-mod-http-ndk-dev
+Architecture: all
+Depends: libnginx-mod-http-ndk (<< ${source:Version}.1~), libnginx-mod-http-ndk (>= ${source:Version}),
+         nginx-dev (>= ${source:Version}), nginx-dev (<< ${source:Version}.1~), ${misc:Depends}
+Description: Nginx Development Kit module - development files
+ The NDK is an Nginx module that is designed to extend the core functionality of
+ the excellent Nginx webserver in a way that can be used as a basis of other
+ Nginx modules.
+ .
+ This package provides development headers and necessary config scripts
+ for the Nginx development kit module, useful to develop and link third party
+ additions to the Debian nginx web/proxy server packages using Nginx
+ development kit module.
+ .
+ Development files.
+
 Package: libnginx-mod-nchan
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
