@@ -7,7 +7,6 @@ Uploaders: Christos Trochalakis <ctrochalakis@debian.org>,
            Thomas Ward <teward@ubuntu.com>,
            Jan Mojžíš <jan.mojzis@gmail.com>,
 Build-Depends: debhelper-compat (= 13),
-               dpkg-dev (>= 1.15.5),
                libexpat-dev,
                libgd-dev,
                libgeoip-dev,
@@ -58,7 +57,7 @@ Description: small, powerful, scalable web/proxy server - documentation
 Package: nginx-common
 Architecture: all
 Multi-Arch: foreign
-Depends: lsb-base (>= 3.0-6), ${misc:Depends}
+Depends: lsb-base, ${misc:Depends}
 Suggests: fcgiwrap, nginx-doc, ssl-cert
 Description: small, powerful, scalable web/proxy server - common files
  Nginx ("engine X") is a high-performance web and reverse proxy server
@@ -105,8 +104,7 @@ Depends: libnginx-mod-http-geoip (= ${binary:Version}),
          iproute2,
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: nginx (<< 1.4.5-1),
-        nginx-full (<< 1.18.0-1),
+Breaks: nginx-full (<< 1.18.0-1),
 Replaces: nginx-full (<< 1.18.0-1),
 Provides: httpd, httpd-cgi, nginx
 Conflicts: nginx-extras, nginx-light
@@ -146,7 +144,6 @@ Depends: libnginx-mod-http-auth-pam,
          nginx-core (<< ${source:Version}.1~),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: nginx (<< 1.4.5-1)
 Provides: httpd, httpd-cgi, nginx
 Suggests: nginx-doc (= ${source:Version})
 Description: nginx web/proxy server (standard version with 3rd parties)
@@ -181,7 +178,6 @@ Depends: libnginx-mod-http-echo (= ${binary:Version}),
          iproute2,
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: nginx (<< 1.4.5-1)
 Provides: httpd, httpd-cgi, nginx
 Conflicts: nginx-extras, nginx-core
 Suggests: nginx-doc (= ${source:Version})
@@ -228,7 +224,6 @@ Depends: libnginx-mod-http-auth-pam (= ${binary:Version}),
          iproute2,
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: nginx (<< 1.4.5-1)
 Provides: httpd, httpd-cgi, nginx
 Conflicts: nginx-core, nginx-light
 Suggests: nginx-doc (= ${source:Version})
@@ -351,7 +346,6 @@ Package: libnginx-mod-http-perl
 Architecture: any
 Depends: ${misc:Depends}, ${perl:Depends}, ${shlibs:Depends},
 Recommends: nginx,
-Replaces: nginx-extras (<< 1.9.14-1)
 Description: Perl module for Nginx
  Embed Perl runtime into nginx.
  .
