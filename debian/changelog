@@ -1,5 +1,10 @@
 nginx (1.22.0-2) UNRELEASED; urgency=medium
 
+  [ Miao Wang ]
+  * adding a new libnginx-mod-http-ndk-dev package including necessary
+    headers to build a 3rd party module depending on ndk.
+
+  [ Jan Mojžíš ]
   * d/nginx-common.nginx.service: added Systemd dependency
     Wants=network-online.target and updated Systemd "After" dependency to
     recommended NGINX values, namely:
@@ -10,6 +15,23 @@ nginx (1.22.0-2) UNRELEASED; urgency=medium
     to upstream (Closes: 859082)
   * d/t/reboot: added, tests if nginx works after reboot
   * d/m/p/http-subs-filter/pcre2.patch: added PCRE2 support
+  * d/p/nginx-fix-pidfile.patch: Fix NGINX PIDfile handling to avoid
+    SystemD race condition, this fix is backported from Ubuntu (Closes: 876365)
+  * d/apport/source_nginx.py: Add apport hooks for additional bug
+    information gathering, the script is backported from Ubuntu (Closes: 963668)
+  * d/nginx-common.install: Add install rule for apport hooks.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on dpkg-dev.
+    + nginx-common: Drop versioned constraint on lsb-base in Depends.
+    + nginx-core: Drop versioned constraint on nginx in Breaks.
+    + nginx-full: Drop versioned constraint on nginx in Breaks.
+    + nginx-light: Drop versioned constraint on nginx in Breaks.
+    + nginx-extras: Drop versioned constraint on nginx in Breaks.
+    + libnginx-mod-http-perl: Drop versioned constraint on nginx-extras in
+      Replaces.
+    + Remove 5 maintscript entries from 1 files.
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Sun, 10 Jul 2022 07:58:44 +0200
 
