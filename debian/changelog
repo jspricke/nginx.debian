@@ -1,4 +1,4 @@
-nginx (1.22.0-2) UNRELEASED; urgency=medium
+nginx (1.22.0-2) unstable; urgency=medium
 
   [ Miao Wang ]
   * adding a new libnginx-mod-http-ndk-dev package including necessary
@@ -33,7 +33,7 @@ nginx (1.22.0-2) UNRELEASED; urgency=medium
       Replaces.
     + Remove 5 maintscript entries from 1 files.
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Sun, 10 Jul 2022 07:58:44 +0200
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Sun, 07 Aug 2022 16:14:59 +0200
 
 nginx (1.22.0-1) unstable; urgency=medium
 
