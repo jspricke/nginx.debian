@@ -1,3 +1,9 @@
+nginx (1.22.0-3) UNRELEASED; urgency=medium
+
+  * d/changelog: fixed typo in bug number 61261 -> 861261 (Closes: 861261) 
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Mon, 08 Aug 2022 12:29:34 +0200
+
 nginx (1.22.0-2) unstable; urgency=medium
 
   [ Miao Wang ]
@@ -8,7 +14,7 @@ nginx (1.22.0-2) unstable; urgency=medium
   * d/nginx-common.nginx.service: added Systemd dependency
     Wants=network-online.target and updated Systemd "After" dependency to
     recommended NGINX values, namely:
-    - network-online.target (Closes: 61261) (Closes: 1000406)
+    - network-online.target (Closes: 861261) (Closes: 1000406)
     - remote-fs.target (Closes: 898896)
     - nss-lookup.target
   * d/p/0003-define_gnu_source-on-other-glibc-based-platforms.patch: forwarded
