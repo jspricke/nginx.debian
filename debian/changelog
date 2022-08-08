@@ -1,6 +1,7 @@
 nginx (1.22.0-3) UNRELEASED; urgency=medium
 
   * d/changelog: fixed typo in bug number 61261 -> 861261 (Closes: 861261) 
+  * d/p/nginx-ssl_cert_cb_yield.patch added (Closes: 884434)
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Mon, 08 Aug 2022 12:29:34 +0200
 
