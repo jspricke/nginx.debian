@@ -11,8 +11,6 @@ Build-Depends: debhelper-compat (= 13),
                libgd-dev,
                libgeoip-dev,
                libhiredis-dev,
-               liblua5.1-0-dev [!i386 !amd64 !kfreebsd-i386 !kfreebsd-amd64 !armel !armhf !powerpc !powerpcspe !mips !mipsel !mips64el !arm64 !ppc64 !s390x],
-               libluajit-5.1-dev [i386 amd64 kfreebsd-i386 kfreebsd-amd64 armel armhf powerpc powerpcspe mips mipsel mips64el arm64 ppc64 s390x],
                libmaxminddb-dev,
                libmhash-dev,
                libpam0g-dev,
@@ -209,7 +207,7 @@ Depends: libnginx-mod-http-auth-pam (= ${binary:Version}),
          libnginx-mod-http-geoip2 (= ${binary:Version}),
          libnginx-mod-http-headers-more-filter (= ${binary:Version}),
          libnginx-mod-http-image-filter (= ${binary:Version}),
-         libnginx-mod-http-lua (= ${binary:Version}),
+         libnginx-mod-http-lua [amd64 arm64 armel armhf i386 mips64el mipsel s390x],
          libnginx-mod-http-perl (= ${binary:Version}),
          libnginx-mod-http-subs-filter (= ${binary:Version}),
          libnginx-mod-http-uploadprogress (= ${binary:Version}),
@@ -363,20 +361,6 @@ Description: PAM authentication module for Nginx
  .
  The module uses PAM as a backend for simple http authentication. It
  also allows setting the pam service name to allow more fine grained control.
-
-Package: libnginx-mod-http-lua
-Architecture: any
-Depends: libnginx-mod-http-ndk (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends},
-Recommends: nginx,
-Description: Lua module for Nginx
- Embed Lua runtime into nginx.
- .
- This module embeds Lua, via the standard Lua 5.1 interpreter or LuaJIT
- 2.0/2.1, into Nginx and by leveraging Nginx's subrequests, allows the
- integration of the powerful Lua threads (Lua coroutines) into the Nginx event
- model.
 
 Package: libnginx-mod-http-ndk
 Architecture: any
