@@ -1,3 +1,9 @@
+nginx (1.22.1-1) UNRELEASED; urgency=medium
+
+  * New upstream version 1.22.1
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 25 Oct 2022 18:29:34 +0200
+
 nginx (1.22.0-3.1) unstable; urgency=medium
 
   * Non-maintainer upload.
