@@ -1,6 +1,8 @@
 nginx (1.22.1-1) UNRELEASED; urgency=medium
 
   * New upstream version 1.22.1
+  * d/changelog added exact version of dependency libnginx-mod-http-lua
+    (>=1:0.10.22-3)
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 25 Oct 2022 18:29:34 +0200
 
