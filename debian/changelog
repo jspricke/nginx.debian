@@ -1,8 +1,10 @@
 nginx (1.22.1-1) UNRELEASED; urgency=medium
 
   * New upstream version 1.22.1
-  * d/changelog added exact version of dependency libnginx-mod-http-lua
-    (>=1:0.10.22-3)
+  * d/control: added implicit version of dependency libnginx-mod-http-lua
+    (>=1:0.10.22-3~), because it is a rebuilt version with nginx 1.22.1.
+    In order for the dependency to work even in an experimental environment,
+    the version is terminated by '~'.
   * Added libnginx-mod-http-lua powerpc architecture
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 25 Oct 2022 18:29:34 +0200
