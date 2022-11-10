@@ -1,18 +1,15 @@
-nginx (1.22.1-1) UNRELEASED; urgency=medium
+nginx (1.22.1-1) unstable; urgency=medium
 
   [ Jan Mojžíš ]
   * New upstream version 1.22.1
   * d/control: added implicit version of dependency libnginx-mod-http-lua
     (>=1:0.10.22-3~), it is a rebuilt version with nginx 1.22.1.
-    To make the dependency work also with the experimental version of
-    libnginx-mod-http-lua in the experimental environment, the version
-    is terminated by '~'.
   * Added libnginx-mod-http-lua powerpc architecture
 
   [ Debian Janitor ]
   * Fix day-of-week for changelog entry 0.5.11-1.
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 25 Oct 2022 18:29:34 +0200
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 10 Nov 2022 18:21:43 +0100
 
 nginx (1.22.0-3.1) unstable; urgency=medium
 
