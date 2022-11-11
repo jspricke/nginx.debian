@@ -484,7 +484,7 @@ Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
 Recommends: nginx,
 Description: Substitution filter module for Nginx
- Subsitution Nginx module can do both regular expression and fixed string
+ Substitution Nginx module can do both regular expression and fixed string
  substitutions on response bodies. The module is quite different from Nginx's
  native Substitution module. It scans the output chains buffer and
  matches string line by line, just like Apache's mod_substitute.
