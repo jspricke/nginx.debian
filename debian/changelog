@@ -1,3 +1,44 @@
+nginx (1.14.2-2+deb10u5) buster-security; urgency=high
+
+  * Non-maintainer upload by the LTS team.
+  * Fix CVE-2021-3618:
+    ALPACA is an application layer protocol content confusion attack,
+    exploiting TLS servers implementing different protocols but using
+    compatible certificates, such as multi-domain or wildcard certificates. A
+    MiTM attacker having access to victim's traffic at the TCP/IP layer can
+    redirect traffic from one subdomain to another, resulting in a valid TLS
+    session. This breaks the authentication of TLS and cross-protocol attacks
+    may be possible where the behavior of one protocol service may compromise
+    the other at the application layer.
+  * Fix CVE-2022-41741 and CVE-2022-41742:
+    It was discovered that parsing errors in the mp4 module of Nginx, a
+    high-performance web and reverse proxy server, could result in denial of
+    service, memory disclosure or potentially the execution of arbitrary code
+    when processing a malformed mp4 file.
+
+ -- Markus Koschany <apo@debian.org>  Tue, 22 Nov 2022 23:03:15 +0100
+
+nginx (1.14.2-2+deb10u4) buster-security; urgency=medium
+
+  * CVE-2021-23017 (Closes: #989095)
+
+ -- Moritz Mühlenhoff <jmm@debian.org>  Fri, 28 May 2021 10:43:00 +0200
+
+nginx (1.14.2-2+deb10u3) buster-security; urgency=high
+
+  * Non-maintainer upload by the Security Team.
+  * bugfix: prevented request smuggling in the ngx.location.capture API
+    (CVE-2020-11724) (Closes: #964950)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Mon, 24 Aug 2020 12:18:43 +0200
+
+nginx (1.14.2-2+deb10u2) buster; urgency=medium
+
+  * Handle CVE-2019-20372, error page request smuggling
+    (Closes: #948579)
+
+ -- Christos Trochalakis <ctrochalakis@debian.org>  Sat, 11 Jan 2020 09:28:05 +0200
+
 nginx (1.14.2-2+deb10u1) buster-security; urgency=high
 
   * Backport upstream fixes for 3 CVEs (Closes: #935037)
