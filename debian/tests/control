@@ -125,3 +125,7 @@ Depends: nginx-extras,
 Tests: reboot
 Restrictions: isolation-container, needs-root, needs-reboot
 Depends: nginx-light, curl
+
+Tests: ssi-module-test
+Restrictions: allow-stderr, isolation-container, needs-root,
+Depends: nginx, nginx-core, curl
