@@ -1,6 +1,6 @@
 nginx (1.22.1-2) UNRELEASED; urgency=medium
 
-  * d/control: fixed spelling-error-in-description 
+  * d/control: fixed spelling-error-in-description
   * d/nginx-*.postinst: fixed postinst script, used invoke-rc.d instead of
     pidof and ad-hoc tests, tnx Gioele Barabucci
 
