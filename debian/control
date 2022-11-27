@@ -81,6 +81,7 @@ Depends: ${misc:Depends},
          zlib1g-dev,
          nginx-core (<< ${source:Version}.1~) | nginx-light (<< ${source:Version}.1~) | nginx-extras (<< ${source:Version}.1~),
          nginx-core (>= ${source:Version}) | nginx-light (>= ${source:Version}) | nginx-extras (>= ${source:Version})
+Provides: dh-sequence-nginx
 Description: nginx web/proxy server - development headers
  Nginx ("engine X") is a high-performance web and reverse proxy server
  created by Igor Sysoev. It can be used both as a standalone web server
