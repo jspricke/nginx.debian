@@ -16,6 +16,10 @@ nginx (1.22.1-2) UNRELEASED; urgency=medium
   * d/debhelper: set nginx_mod buildsystem by default
   * d/control: nginx-dev provides dh-sequence-nginx (Closes: #1024879)
 
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable):
+    + nginx-dev: Drop versioned constraint on dpkg-dev in Depends.
+
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Sat, 26 Nov 2022 22:27:46 +0100
 
 nginx (1.22.1-1) unstable; urgency=medium
