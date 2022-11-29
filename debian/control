@@ -2,10 +2,7 @@ Source: nginx
 Section: httpd
 Priority: optional
 Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
-Uploaders: Christos Trochalakis <ctrochalakis@debian.org>,
-           Ondřej Nový <onovy@debian.org>,
-           Thomas Ward <teward@ubuntu.com>,
-           Jan Mojžíš <jan.mojzis@gmail.com>,
+Uploaders: Jan Mojžíš <jan.mojzis@gmail.com>
 Build-Depends: debhelper-compat (= 13),
                libexpat-dev,
                libgd-dev,
