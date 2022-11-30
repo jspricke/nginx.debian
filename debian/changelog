@@ -1,4 +1,4 @@
-nginx (1.22.1-2) UNRELEASED; urgency=medium
+nginx (1.22.1-2) unstable; urgency=medium
 
   [ Jan Mojžíš ]
   * d/control: fixed spelling-error-in-description
@@ -22,7 +22,7 @@ nginx (1.22.1-2) UNRELEASED; urgency=medium
   * Remove constraints unnecessary since buster (oldstable):
     + nginx-dev: Drop versioned constraint on dpkg-dev in Depends.
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Sat, 26 Nov 2022 22:27:46 +0100
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Wed, 30 Nov 2022 17:39:42 +0100
 
 nginx (1.22.1-1) unstable; urgency=medium
 
