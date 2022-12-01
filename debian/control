@@ -64,6 +64,7 @@ Description: small, powerful, scalable web/proxy server - common files
 
 Package: nginx-dev
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends},
          debhelper-compat (= 13),
          dpkg-dev,
