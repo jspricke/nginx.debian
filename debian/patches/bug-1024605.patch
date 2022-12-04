@@ -3,6 +3,7 @@ Author: User Ciel Zhao <i@ciel.dev>
 Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1024605
 Last-Update: 2022-11-21
 Origin: https://hg.nginx.org/nginx/raw-rev/49e7db44b57c
+Forwarded: not-needed
 ---
 # HG changeset patch
 # User Ciel Zhao <i@ciel.dev>
