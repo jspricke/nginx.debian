@@ -7,7 +7,9 @@ package Debian::Debhelper::Buildsystem::nginx_mod;
 
 use strict;
 use warnings;
-use Debian::Debhelper::Dh_Lib qw(error doit);
+use Dpkg::Deps qw(deps_parse);
+use Dpkg::Control::Info;
+use Debian::Debhelper::Dh_Lib qw(error doit getpackages addsubstvar);
 use File::Spec;
 use parent qw(Debian::Debhelper::Buildsystem::makefile);
 use Config;
@@ -26,10 +28,20 @@ sub _NGINX_SRC_DIR {
 	"/usr/share/nginx/src"
 }
 
+sub _NDK_SRC_DIR {
+	"/usr/share/nginx-ndk/src"
+}
+
 sub new {
 	my $class=shift;
 	my $this= $class->SUPER::new(@_);
 	$this->prefer_out_of_source_building(@_);
+	$this->{has_ndk} = $this->has_build_dep("libnginx-mod-http-ndk-dev");
+	if ($this->{has_ndk} == 1){
+		foreach my $cur (getpackages('arch')) {
+			addsubstvar($cur, "misc:Depends", "libnginx-mod-http-ndk");
+		}
+	}
 	return $this;
 }
 
@@ -50,6 +62,7 @@ sub configure {
 		"${NGX_CONF_FLAGS[@]}" \\
 		--add-dynamic-module="$pwd_dir/$src_dir" \\
 		--builddir="$pwd_dir/$bld_dir" \\
+		' . ($this->{has_ndk} ? '--add-module=' . $this->_NDK_SRC_DIR : '') . ' \\
 		"$@"', "dummy", @_);
 }
 
@@ -61,6 +74,11 @@ sub build {
 
 sub test {
 	my $this=shift;
+
+	if ( $this->{has_ndk} and !grep( /^ndk_http_module.so$/, @_ ) ) {
+		unshift @_, "ndk_http_module.so";
+	}
+
 	$this->doit_in_builddir("bash", "-e", "-o", "pipefail", "-c", '
 		tmp_conf=$(mktemp -p .)
 		for pre_dep in "$@"; do
@@ -91,6 +109,19 @@ sub install {
 sub clean {
 	my $this=shift;
 	$this->rmdir_builddir();
+}
+
+sub has_build_dep {
+	my $this=shift;
+	my $bd=shift;
+	my $control = Dpkg::Control::Info->new()->get_source();
+	my $depends = deps_parse($control->{'Build-Depends'});
+	foreach (split /,\s+/,$depends) {
+		if ($_ =~ /$bd/) {
+		return 1;
+	}
+	}
+	return 0;
 }
 
 1
