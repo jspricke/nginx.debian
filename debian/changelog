@@ -2,6 +2,12 @@ nginx (1.22.1-4) UNRELEASED; urgency=medium
 
   * d/t/*-module-deps: updated, added curl timeout 300 seconds and
     added nginx restart before calling curl
+  * d/t/*-module-deps: update:
+    - added tests for new ext. module libnginx-mod-http-set-misc
+    - added tests for new ext. module libnginx-mod-http-brotli-filter
+    - added tests for new ext. module libnginx-mod-http-brotli-static
+    - added tests for new ext. module libnginx-mod-http-memc
+    - added tests for new ext. module libnginx-mod-http-srcache-filter
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 08 Dec 2022 09:47:06 +0100
 
