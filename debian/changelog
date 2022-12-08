@@ -8,6 +8,10 @@ nginx (1.22.1-4) UNRELEASED; urgency=medium
     - added tests for new ext. module libnginx-mod-http-brotli-static
     - added tests for new ext. module libnginx-mod-http-memc
     - added tests for new ext. module libnginx-mod-http-srcache-filter
+  * removed 3th party modules and moved to separate packages:
+    - libnginx-mod-nchan module
+    - libnginx-mod-rtmp module
+    - libnginx-mod-http-ndk module
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 08 Dec 2022 09:47:06 +0100
 

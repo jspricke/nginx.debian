@@ -213,7 +213,7 @@ Depends: libnginx-mod-http-auth-pam (>= ${binary:Version}),
          libnginx-mod-http-upstream-fair (>= ${binary:Version}),
          libnginx-mod-http-xslt-filter (= ${binary:Version}),
          libnginx-mod-mail (= ${binary:Version}),
-         libnginx-mod-nchan (>= ${binary:Version}),
+         libnginx-mod-nchan (>= 1:1.3.5+dfsg-2~),
          libnginx-mod-stream (= ${binary:Version}),
          libnginx-mod-stream-geoip (= ${binary:Version}),
          libnginx-mod-stream-geoip2 (>= ${binary:Version}),
@@ -361,50 +361,6 @@ Description: PAM authentication module for Nginx
  The module uses PAM as a backend for simple http authentication. It
  also allows setting the pam service name to allow more fine grained control.
 
-Package: libnginx-mod-http-ndk
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
-Recommends: nginx,
-Description: Nginx Development Kit module
- The NDK is an Nginx module that is designed to extend the core functionality of
- the excellent Nginx webserver in a way that can be used as a basis of other
- Nginx modules.
- .
- It has functions and macros to deal with generic tasks that don't currently
- have generic code as part of the core distribution. The NDK itself adds few
- features that are seen from a user's point of view - it's just designed to help
- reduce the code that Nginx module developers need to write.
-
-Package: libnginx-mod-http-ndk-dev
-Architecture: all
-Depends: libnginx-mod-http-ndk (<< ${source:Version}.1~), libnginx-mod-http-ndk (>= ${source:Version}),
-         nginx-dev (>= ${source:Version}), nginx-dev (<< ${source:Version}.1~), ${misc:Depends}
-Description: Nginx Development Kit module - development files
- The NDK is an Nginx module that is designed to extend the core functionality of
- the excellent Nginx webserver in a way that can be used as a basis of other
- Nginx modules.
- .
- This package provides development headers and necessary config scripts
- for the Nginx development kit module, useful to develop and link third party
- additions to the Debian nginx web/proxy server packages using Nginx
- development kit module.
- .
- Development files.
-
-Package: libnginx-mod-nchan
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
-Recommends: nginx,
-Description: Fast, flexible pub/sub server for Nginx
- Nchan is a scalable, flexible pub/sub server for the modern web, It can be
- configured as a standalone server, or as a shim between your application and
- tens, thousands, or millions of live subscribers. It can buffer messages in
- memory, on-disk, or via Redis. All connections are handled asynchronously and
- distributed among any number of worker processes. It can also scale to many
- nginx server instances with Redis.
- .
- Full documentation available at https://nchan.slact.net
-
 Package: libnginx-mod-http-echo
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends},
@@ -498,17 +454,3 @@ Description: WebDAV missing commands support for Nginx
  .
  WebDAV Ext provides the missing PROPFIND & OPTIONS methods.
 
-Package: libnginx-mod-rtmp
-Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends},
-Recommends: nginx,
-Description: RTMP support for Nginx
- The nginx RTMP module is a fully-featured streaming solution implemented in
- nginx.
- .
- It provides the following features:
-  - Live streaming with RTMP, HLS and MPEG-DASH;
-  - RTMP Video on Demand from local or HTTP sources;
-  - Stream relay support via a push or pull model;
-  - Integrated stream recording;
-  - and more.

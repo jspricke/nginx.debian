@@ -16,22 +16,19 @@ DYN_MODS := \
 	http-geoip2 \
 	http-headers-more-filter \
 	http-image-filter \
-	http-ndk \
 	http-perl \
 	http-subs-filter \
 	http-uploadprogress \
 	http-upstream-fair \
 	http-xslt-filter \
 	mail \
-	nchan \
-	rtmp \
 	stream \
 	stream-geoip \
 	stream-geoip2
 
 MODULESDIR = $(CURDIR)/debian/modules
 BASEDIR = $(CURDIR)
-$(foreach flavour,$(FLAVOURS) src ndksrc,$(eval BUILDDIR_$(flavour) = $(CURDIR)/debian/build-$(flavour)))
+$(foreach flavour,$(FLAVOURS) src ,$(eval BUILDDIR_$(flavour) = $(CURDIR)/debian/build-$(flavour)))
 
 DEB_BUILD_ARCH ?=$(shell dpkg-architecture -qDEB_BUILD_ARCH)
 ifeq ($(DEB_BUILD_ARCH),sparc)
@@ -120,12 +117,9 @@ extras_configure_flags := \
 			--add-dynamic-module=$(MODULESDIR)/http-auth-pam \
 			--add-dynamic-module=$(MODULESDIR)/http-cache-purge \
 			--add-dynamic-module=$(MODULESDIR)/http-dav-ext \
-			--add-dynamic-module=$(MODULESDIR)/http-ndk \
 			--add-dynamic-module=$(MODULESDIR)/http-echo \
 			--add-dynamic-module=$(MODULESDIR)/http-fancyindex \
 			--add-dynamic-module=$(MODULESDIR)/http-geoip2 \
-			--add-dynamic-module=$(MODULESDIR)/nchan \
-			--add-dynamic-module=$(MODULESDIR)/rtmp \
 			--add-dynamic-module=$(MODULESDIR)/http-uploadprogress \
 			--add-dynamic-module=$(MODULESDIR)/http-upstream-fair \
 			--add-dynamic-module=$(MODULESDIR)/http-subs-filter
@@ -133,10 +127,10 @@ extras_configure_flags := \
 %:
 	dh $@ --without autoreconf
 
-override_dh_auto_configure: config_patch_modules $(foreach flavour,$(FLAVOURS),config.arch.$(flavour)) config.src config.ndksrc
-override_dh_auto_build:     $(foreach flavour,$(FLAVOURS),build.arch.$(flavour)) build.src build.ndksrc
+override_dh_auto_configure: config_patch_modules $(foreach flavour,$(FLAVOURS),config.arch.$(flavour)) config.src
+override_dh_auto_build:     $(foreach flavour,$(FLAVOURS),build.arch.$(flavour)) build.src
 override_dh_strip:          $(foreach flavour,$(FLAVOURS),strip.arch.$(flavour)) $(foreach mod,$(DYN_MODS),strip.mods.$(mod))
-override_dh_clean:          clean_patch_modules $(foreach flavour,$(FLAVOURS),clean.$(flavour)) clean.src clean.ndksrc
+override_dh_clean:          clean_patch_modules $(foreach flavour,$(FLAVOURS),clean.$(flavour)) clean.src
 	dh_clean
 
 override_dh_install:
@@ -162,16 +156,6 @@ build.src:
 	if [ -e $(CURDIR)/configure ]; then cp $(CURDIR)/configure $(BUILDDIR_src)/; fi
 	echo "NGX_CONF_FLAGS=(" $(basic_configure_flags) ")" > $(BUILDDIR_src)/conf_flags
 	pod2man debian/debhelper/dh_nginx > $(BUILDDIR_src)/dh_nginx.1
-
-build.ndksrc:
-	cp -Pa $(CURDIR)/debian/modules/http-ndk/auto \
-	       $(CURDIR)/debian/modules/http-ndk/config \
-		   $(CURDIR)/debian/modules/http-ndk/ngx_auto_lib_core $(BUILDDIR_ndksrc)/
-	for i in src objs; do \
-	  find $(CURDIR)/debian/modules/http-ndk/$$i -type f -name '*.h' -printf "$$i/%P\0" | \
-	    tar -C $(CURDIR)/debian/modules/http-ndk --null --files-from - -c | tar -C $(BUILDDIR_ndksrc)/ -x; \
-	done
-	chmod +x $(CURDIR)/debian/build-ndksrc/auto/build
 
 strip.arch.%:
 	dh_strip --package=nginx-$(*) -O--dbgsym-migration='nginx-$(*)-dbg (<< 1.10.1-3~)'
@@ -200,24 +184,10 @@ config.arch.%:
 	cp -Pa $(CURDIR)/src $(BUILDDIR_$*)/
 	cp -Pa $(CURDIR)/man $(BUILDDIR_$*)/
 	cd $(BUILDDIR_$*) && ./configure $($*_configure_flags)
-	if [ "$(BUILDDIR_$*)" = "$(BUILDDIR_extras)" ]; then \
-	  for have in NDK_SET_VAR NDK_UPSTREAM_LIST; do \
-	    ( \
-	      echo "#ifndef $$have"; \
-	      echo "#define $$have 1"; \
-	      echo "#endif"; \
-	      echo; \
-	    ) >> $(BUILDDIR_$*)/objs/ngx_auto_config.h; \
-	  done \
-	fi
 
 config.src:
 	dh_testdir
 	mkdir -p $(BUILDDIR_src)
-
-config.ndksrc:
-	dh_testdir
-	mkdir -p $(BUILDDIR_ndksrc)
 
 clean.%:
 	rm -rf $(BUILDDIR_$*)
