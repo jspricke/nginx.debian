@@ -1,4 +1,4 @@
-nginx (1.22.1-4) UNRELEASED; urgency=medium
+nginx (1.22.1-4) unstable; urgency=medium
 
   * d/t/*-module-deps: updated, added curl timeout 300 seconds and
     added nginx restart before calling curl
@@ -13,7 +13,7 @@ nginx (1.22.1-4) UNRELEASED; urgency=medium
     - libnginx-mod-rtmp module
     - libnginx-mod-http-ndk module
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 08 Dec 2022 09:47:06 +0100
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 08 Dec 2022 14:15:15 +0100
 
 nginx (1.22.1-3) unstable; urgency=medium
 
