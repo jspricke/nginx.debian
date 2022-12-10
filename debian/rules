@@ -7,26 +7,14 @@ debian_ldflags:=$(shell dpkg-buildflags --get LDFLAGS) -fPIC
 
 FLAVOURS := core light extras
 DYN_MODS := \
-	http-auth-pam \
-	http-cache-purge \
-	http-dav-ext \
-	http-echo \
-	http-fancyindex \
 	http-geoip \
-	http-geoip2 \
-	http-headers-more-filter \
 	http-image-filter \
 	http-perl \
-	http-subs-filter \
-	http-uploadprogress \
-	http-upstream-fair \
 	http-xslt-filter \
 	mail \
 	stream \
-	stream-geoip \
-	stream-geoip2
+	stream-geoip
 
-MODULESDIR = $(CURDIR)/debian/modules
 BASEDIR = $(CURDIR)
 $(foreach flavour,$(FLAVOURS) src ,$(eval BUILDDIR_$(flavour) = $(CURDIR)/debian/build-$(flavour)))
 
@@ -39,9 +27,6 @@ ifneq (,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	NUMJOBS = $(patsubst parallel=%,%,$(filter parallel=%,$(DEB_BUILD_OPTIONS)))
 	MAKEFLAGS += -j$(NUMJOBS)
 endif
-
-MODULESPATCHDIR = $(CURDIR)/debian/modules/patches
-modules_with_patches := $(notdir $(wildcard $(CURDIR)/debian/modules/patches/*))
 
 # configure flags
 basic_configure_flags := \
@@ -112,25 +97,15 @@ extras_configure_flags := \
 			--with-stream=dynamic \
 			--with-stream_geoip_module=dynamic \
 			--with-stream_ssl_module \
-			--with-stream_ssl_preread_module \
-			--add-dynamic-module=$(MODULESDIR)/http-headers-more-filter \
-			--add-dynamic-module=$(MODULESDIR)/http-auth-pam \
-			--add-dynamic-module=$(MODULESDIR)/http-cache-purge \
-			--add-dynamic-module=$(MODULESDIR)/http-dav-ext \
-			--add-dynamic-module=$(MODULESDIR)/http-echo \
-			--add-dynamic-module=$(MODULESDIR)/http-fancyindex \
-			--add-dynamic-module=$(MODULESDIR)/http-geoip2 \
-			--add-dynamic-module=$(MODULESDIR)/http-uploadprogress \
-			--add-dynamic-module=$(MODULESDIR)/http-upstream-fair \
-			--add-dynamic-module=$(MODULESDIR)/http-subs-filter
+			--with-stream_ssl_preread_module
 
 %:
 	dh $@ --without autoreconf
 
-override_dh_auto_configure: config_patch_modules $(foreach flavour,$(FLAVOURS),config.arch.$(flavour)) config.src
+override_dh_auto_configure: $(foreach flavour,$(FLAVOURS),config.arch.$(flavour)) config.src
 override_dh_auto_build:     $(foreach flavour,$(FLAVOURS),build.arch.$(flavour)) build.src
 override_dh_strip:          $(foreach flavour,$(FLAVOURS),strip.arch.$(flavour)) $(foreach mod,$(DYN_MODS),strip.mods.$(mod))
-override_dh_clean:          clean_patch_modules $(foreach flavour,$(FLAVOURS),clean.$(flavour)) clean.src
+override_dh_clean:          $(foreach flavour,$(FLAVOURS),clean.$(flavour)) clean.src
 	dh_clean
 
 override_dh_install:
@@ -163,17 +138,6 @@ strip.arch.%:
 strip.mods.%:
 	dh_strip --package=libnginx-mod-$(*) -O--automatic-dbgsym
 
-config_patch_modules: $(foreach mod,$(modules_with_patches),config.patch.$(mod))
-config.patch.%:
-	cd $(MODULESDIR)/$* && QUILT_PATCHES=$(MODULESPATCHDIR)/$* quilt push -a
-
-clean_patch_modules: $(foreach mod,$(modules_with_patches),clean.patch.$(mod))
-clean.patch.%:
-	if [ -s $(MODULESDIR)/$*/.pc/applied-patches ]; then \
-		cd $(MODULESDIR)/$* && QUILT_PATCHES=$(MODULESPATCHDIR)/$* quilt pop -q -a; \
-		rm -rf $(MODULESDIR)/$*/.pc; \
-	fi
-
 config.arch.%:
 	dh_testdir
 	mkdir -p $(BUILDDIR_$*)
@@ -191,5 +155,3 @@ config.src:
 
 clean.%:
 	rm -rf $(BUILDDIR_$*)
-
-.PHONY: config_patch_modules clean_patch_modules
