@@ -1,17 +1,19 @@
 nginx (1.22.1-5) UNRELEASED; urgency=medium
 
-  * removed 3th party modules and moved to separate packages:
-    - libnginx-mod-http-geoip2
-    - libnginx-mod-stream-geoip2
-    - libnginx-mod-http-auth-pam
-    - libnginx-mod-http-echo
-    - libnginx-mod-http-upstream-fair
-    - libnginx-mod-http-headers-more-filter
-    - libnginx-mod-http-cache-purge
-    - libnginx-mod-http-fancyindex
-    - libnginx-mod-http-uploadprogress
-    - libnginx-mod-http-subs-filter
-    - libnginx-mod-http-dav-ext
+  * Since version 1.22.1-5 all third party modules are removed from Debian NGINX
+    package and all these modules are maintained in separate external packages.
+    Removed namely these remaining modules:
+      - libnginx-mod-http-geoip2
+      - libnginx-mod-stream-geoip2
+      - libnginx-mod-http-auth-pam
+      - libnginx-mod-http-echo
+      - libnginx-mod-http-upstream-fair
+      - libnginx-mod-http-headers-more-filter
+      - libnginx-mod-http-cache-purge
+      - libnginx-mod-http-fancyindex
+      - libnginx-mod-http-uploadprogress
+      - libnginx-mod-http-subs-filter
+      - libnginx-mod-http-dav-ext
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 09 Dec 2022 16:33:16 +0100
 
