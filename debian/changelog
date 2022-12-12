@@ -1,5 +1,6 @@
 nginx (1.22.1-5) UNRELEASED; urgency=medium
 
+  [ Jan Mojžíš ]
   * Since version 1.22.1-5 all third party modules are removed from Debian NGINX
     package and all these modules are maintained in separate external packages.
     Removed namely these remaining modules:
@@ -14,6 +15,15 @@ nginx (1.22.1-5) UNRELEASED; urgency=medium
       - libnginx-mod-http-uploadprogress
       - libnginx-mod-http-subs-filter
       - libnginx-mod-http-dav-ext
+
+  [ Jérémy Lal ]
+  * d/rules: default error-log-path is stderr (--error-log-path=stderr)
+    instead of hardcoded /var/log/nginx/error.log (Closes: 1025858)
+
+  [ Miao Wang ]
+  * d/control: removed unnecessary dependencies after removing 3rd party modules
+  * d/rules: enabled stream_realip_module (--with-stream_realip_module)
+  * d/rules: explicitly disabled pcre2 (--without-pcre2)
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 09 Dec 2022 16:33:16 +0100
 
