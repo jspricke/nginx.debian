@@ -19,6 +19,7 @@ nginx (1.22.1-5) UNRELEASED; urgency=medium
   [ Jérémy Lal ]
   * d/rules: default error-log-path is stderr (--error-log-path=stderr)
     instead of hardcoded /var/log/nginx/error.log (Closes: 1025858)
+  * dh nginx: auto-detect build-dependency on ndk-dev
 
   [ Miao Wang ]
   * d/control: removed unnecessary dependencies after removing 3rd party modules
