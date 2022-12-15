@@ -88,7 +88,7 @@ sub test {
 			echo "load_module $PWD/$i;" >> "$tmp_conf"
 		done
 		echo "events{}" >> "$tmp_conf"
-		nginx -g "error_log /dev/null; pid /dev/null;" -t -q -c "$PWD/$tmp_conf"
+		/usr/sbin/nginx -g "error_log /dev/null; pid /dev/null;" -t -q -c "$PWD/$tmp_conf"
 		rm -f "$tmp_conf"
 	', "dummy", @_);
 }
