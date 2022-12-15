@@ -20,6 +20,12 @@ nginx (1.22.1-5) UNRELEASED; urgency=medium
   * d/rules: default error-log-path is stderr (--error-log-path=stderr)
     instead of hardcoded /var/log/nginx/error.log (Closes: 1025858)
   * dh nginx: auto-detect build-dependency on ndk-dev
+  * dh nginx: absolute /usr/sbin/nginx path for nginx tests
+  * d/p/nginx-ssl_cert_cb_yield.patch SSL_CTX_set_cert_cb() callback yielding
+    patch update
+  * d/conf/nginx.conf: Set global error_log to /var/log/error.log
+    Now that error_log default value is stderr, it is possible
+    to override that config using nginx -g 'error_log stderr;'
 
   [ Miao Wang ]
   * d/control: removed unnecessary dependencies after removing 3rd party modules
