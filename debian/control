@@ -61,7 +61,7 @@ Description: small, powerful, scalable web/proxy server - common files
 Package: nginx-dev
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}, ${S:Build-Depends},
+Depends: ${misc:Depends},
          nginx-core (<< ${source:Version}.1~) | nginx-light (<< ${source:Version}.1~) | nginx-extras (<< ${source:Version}.1~),
          nginx-core (>= ${source:Version}) | nginx-light (>= ${source:Version}) | nginx-extras (>= ${source:Version})
 Provides: dh-sequence-nginx
