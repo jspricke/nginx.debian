@@ -1,8 +1,7 @@
 Debian Packaging
 ================
 
-We use git-buildpackage for packaging. Our repository can be found at
-git.debian.org:/git/collab-maint/nginx.git.
+We use git-buildpackage for packaging.
 
 Workflow for Unstable
 =====================
@@ -14,14 +13,8 @@ Dynamic Modules
 
 Since v1.9.11 Nginx added dynamic module support. This will sanitize the
 nginx packaging flow in the long term, but there is a lot work to be done
-in order to get there. We will gradually convert all modules to dynamic
+in order to get there. We gradually convert all modules to dynamic
 as they add support for it.
-
-Currently nginx modules need to be build together with nginx, but this
-will be fixed upstream [0]. Since we already ship 3rd party modules under
-debian/modules/ we will start shipping module packages (libnginx-mod) from
-the same source. Once upstream implements separated building we will
-split each module to a separate source.
 
 [0] https://www.nginx.com/blog/dynamic-modules-nginx-1-9-11/
 
@@ -34,7 +27,7 @@ as they lack security support.
 The workflow we use is based on the assumption that packaging work happens on
 origin/master and experimental builds are a trivial patch away from that.
 
-The direct consequense of treating experimental as a patchset for origin/master
+The direct consequence of treating experimental as a patchset for origin/master
 is that the relevant branches are forced-pushed whenever we release a new
 1.11.x version. In other words, **it is not safe to base your work on the
 experimental branch**.
@@ -67,11 +60,4 @@ them.
 Older 1.11.x releases are not referenced by any branch, but they can be found
 by the relevant debian/* tag.
 
-3rd party experimental workflow
-===============================
-
-As we described, it is better not base you work on our forced-pushed
-experimental branch. A better approach would be to maintain a custom-build
-branch that is rebased to our latest experimental branch (basically git rebase
---onto the relevant commits should work).
 
