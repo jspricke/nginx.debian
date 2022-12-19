@@ -1,5 +1,5 @@
 Tests: light-simple
-Restrictions: allow-stderr isolation-container
+Restrictions: allow-stderr isolation-container needs-root
 Depends: nginx-light, curl
 
 Tests: ec-x25519
@@ -7,15 +7,15 @@ Restrictions: allow-stderr isolation-container needs-root
 Depends: nginx-light, ssl-cert, curl
 
 Tests: core-simple
-Restrictions: allow-stderr isolation-container
+Restrictions: allow-stderr isolation-container needs-root
 Depends: nginx-core, curl
 
 Tests: full-simple
-Restrictions: allow-stderr isolation-container
+Restrictions: allow-stderr isolation-container needs-root
 Depends: nginx-full, curl
 
 Tests: extras-simple
-Restrictions: allow-stderr isolation-container
+Restrictions: allow-stderr isolation-container needs-root
 Depends: nginx-extras, curl
 
 Tests: core-module-deps

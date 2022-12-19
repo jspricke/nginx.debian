@@ -15,6 +15,8 @@ nginx (1.22.1-5) UNRELEASED; urgency=medium
       - libnginx-mod-http-uploadprogress
       - libnginx-mod-http-subs-filter
       - libnginx-mod-http-dav-ext
+  * d/tests: all *-simple and *-deps tests updated to check if nginx works
+    after installation/reload/restart for all flavours
 
   [ Jérémy Lal ]
   * d/rules: default error-log-path is stderr (--error-log-path=stderr)
