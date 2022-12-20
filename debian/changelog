@@ -1,4 +1,4 @@
-nginx (1.22.1-5) UNRELEASED; urgency=medium
+nginx (1.22.1-5) unstable; urgency=medium
 
   [ Jan Mojžíš ]
   * Since version 1.22.1-5 all third party modules are removed from Debian NGINX
@@ -36,7 +36,7 @@ nginx (1.22.1-5) UNRELEASED; urgency=medium
   * d/rules: enabled stream_realip_module (--with-stream_realip_module)
   * d/rules: explicitly disabled pcre2 (--without-pcre2)
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 09 Dec 2022 16:33:16 +0100
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 20 Dec 2022 10:36:19 +0100
 
 nginx (1.22.1-4) unstable; urgency=medium
 
