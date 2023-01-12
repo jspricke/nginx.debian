@@ -36,7 +36,8 @@ Description: small, powerful, scalable web/proxy server
 Package: nginx-bin
 Architecture: any
 Depends: iproute2,
-         nginx-common (= ${source:Version}),
+         nginx-common (<< ${source:Version}.1~),
+         nginx-common (>= ${source:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Breaks: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
@@ -110,8 +111,6 @@ Depends: libnginx-mod-http-geoip (>= ${source:Version}),
          libnginx-mod-stream (<< ${source:Version}.1~),
          libnginx-mod-stream-geoip (>= ${source:Version}),
          libnginx-mod-stream-geoip (<< ${source:Version}.1~),
-         nginx-common (<< ${source:Version}.1~),
-         nginx-common (>= ${source:Version}),
          nginx-bin (>= ${source:Version}),
          nginx-bin (<< ${source:Version}.1~),
          ${misc:Depends},
