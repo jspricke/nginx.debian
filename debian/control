@@ -22,8 +22,8 @@ Rules-Requires-Root: no
 
 Package: nginx
 Architecture: all
-Depends: nginx-core (<< ${source:Version}.1~) | nginx-full (<< ${source:Version}.1~) | nginx-light (<< ${source:Version}.1~) | nginx-extras (<< ${source:Version}.1~),
-         nginx-core (>= ${source:Version}) | nginx-full (>= ${source:Version}) | nginx-light (>= ${source:Version}) | nginx-extras (>= ${source:Version}),
+Depends: nginx-bin (<< ${source:Version}.1~),
+         nginx-bin (>= ${source:Version}),
          ${misc:Depends}
 Description: small, powerful, scalable web/proxy server
  Nginx ("engine X") is a high-performance web and reverse proxy server
@@ -32,6 +32,28 @@ Description: small, powerful, scalable web/proxy server
  .
  This is a dependency package to install either nginx-core (by default),
  nginx-full, nginx-light or nginx-extras.
+
+Package: nginx-bin
+Architecture: any
+Depends: iproute2,
+         nginx-common (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Breaks: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
+Replaces: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
+Provides: httpd, httpd-cgi, nginx
+Suggests: nginx-doc (= ${source:Version})
+Description: nginx web/proxy server (standard version)
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This package contains nginx binary with the complete set of standard modules
+ included.
+ .
+ STANDARD HTTP MODULES: Core, Access, Auth Basic, Auto Index, Browser, Empty
+ GIF, FastCGI, Geo, Limit Connections, Limit Requests, Map, Memcached, Proxy,
+ Referer, Rewrite, SCGI, Split Clients, UWSGI.
 
 Package: nginx-doc
 Architecture: all
@@ -62,8 +84,8 @@ Package: nginx-dev
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${S:Build-Depends},
-         nginx-core (<< ${source:Version}.1~) | nginx-light (<< ${source:Version}.1~) | nginx-extras (<< ${source:Version}.1~),
-         nginx-core (>= ${source:Version}) | nginx-light (>= ${source:Version}) | nginx-extras (>= ${source:Version})
+         nginx-bin (<< ${source:Version}.1~),
+         nginx-bin (>= ${source:Version}),
 Provides: dh-sequence-nginx
 Description: nginx web/proxy server - development headers
  Nginx ("engine X") is a high-performance web and reverse proxy server
@@ -75,29 +97,35 @@ Description: nginx web/proxy server - development headers
  additions to the Debian nginx web/proxy server packages.
 
 Package: nginx-core
-Architecture: any
-Depends: libnginx-mod-http-geoip (= ${binary:Version}),
-         libnginx-mod-http-image-filter (= ${binary:Version}),
-         libnginx-mod-http-xslt-filter (= ${binary:Version}),
-         libnginx-mod-mail (= ${binary:Version}),
-         libnginx-mod-stream (= ${binary:Version}),
-         libnginx-mod-stream-geoip (= ${binary:Version}),
+Architecture: all
+Depends: libnginx-mod-http-geoip (>= ${source:Version}),
+         libnginx-mod-http-geoip (<< ${source:Version}.1~),
+         libnginx-mod-http-image-filter (>= ${source:Version}),
+         libnginx-mod-http-image-filter (<< ${source:Version}.1~),
+         libnginx-mod-http-xslt-filter (>= ${source:Version}),
+         libnginx-mod-http-xslt-filter (<< ${source:Version}.1~),
+         libnginx-mod-mail (>= ${source:Version}),
+         libnginx-mod-mail (<< ${source:Version}.1~),
+         libnginx-mod-stream (>= ${source:Version}),
+         libnginx-mod-stream (<< ${source:Version}.1~),
+         libnginx-mod-stream-geoip (>= ${source:Version}),
+         libnginx-mod-stream-geoip (<< ${source:Version}.1~),
          nginx-common (<< ${source:Version}.1~),
          nginx-common (>= ${source:Version}),
-         iproute2,
+         nginx-bin (>= ${source:Version}),
+         nginx-bin (<< ${source:Version}.1~),
          ${misc:Depends},
          ${shlibs:Depends}
 Breaks: nginx-full (<< 1.18.0-1),
 Replaces: nginx-full (<< 1.18.0-1),
 Provides: httpd, httpd-cgi, nginx
-Conflicts: nginx-extras, nginx-light
 Suggests: nginx-doc (= ${source:Version})
 Description: nginx web/proxy server (standard version)
  Nginx ("engine X") is a high-performance web and reverse proxy server
  created by Igor Sysoev. It can be used both as a standalone web server
  and as a proxy to reduce the load on back-end HTTP or mail servers.
  .
- This package provides a version of nginx identical to that of nginx-full,
+ This metapackage provides a version of nginx identical to that of nginx-full,
  but without any third-party modules, and only modules in the original
  nginx code base.
  .
@@ -123,8 +151,8 @@ Depends: libnginx-mod-http-auth-pam,
          libnginx-mod-http-subs-filter,
          libnginx-mod-http-upstream-fair,
          libnginx-mod-stream-geoip2,
-         nginx-core (>= ${source:Version}),
-         nginx-core (<< ${source:Version}.1~),
+         nginx-bin (>= ${source:Version}),
+         nginx-bin (<< ${source:Version}.1~),
          ${misc:Depends},
          ${shlibs:Depends}
 Provides: httpd, httpd-cgi, nginx
@@ -155,22 +183,20 @@ Description: nginx web/proxy server (standard version with 3rd parties)
  Upstream Fair Queue.
 
 Package: nginx-light
-Architecture: any
+Architecture: all
 Depends: libnginx-mod-http-echo (>= 1:0.63-3~),
-         nginx-common (<< ${source:Version}.1~),
-         nginx-common (>= ${source:Version}),
-         iproute2,
+         nginx-bin (>= ${source:Version}),
+         nginx-bin (<< ${source:Version}.1~),
          ${misc:Depends},
          ${shlibs:Depends}
 Provides: httpd, httpd-cgi, nginx
-Conflicts: nginx-extras, nginx-core
 Suggests: nginx-doc (= ${source:Version})
 Description: nginx web/proxy server (basic version)
  Nginx ("engine X") is a high-performance web and reverse proxy server
  created by Igor Sysoev. It can be used both as a standalone web server
  and as a proxy to reduce the load on back-end HTTP or mail servers.
  .
- This package provides a very light version of nginx with only the
+ This metapackage provides a very light version of nginx with only the
  minimal set of features and modules.
  .
  STANDARD HTTP MODULES: Core, Access, Auth Basic, Auto Index, Empty GIF,
@@ -189,35 +215,40 @@ Depends: libnginx-mod-http-auth-pam (>= 1:1.5.3-2~),
          libnginx-mod-http-dav-ext (>= 1:3.0.0-2~),
          libnginx-mod-http-echo (>= 1:0.63-3~),
          libnginx-mod-http-fancyindex (>= 1:0.5.2-2~),
-         libnginx-mod-http-geoip (= ${binary:Version}),
+         libnginx-mod-http-geoip (>= ${source:Version}),
+         libnginx-mod-http-geoip (<< ${source:Version}.1~),
          libnginx-mod-http-geoip2 (>= 1:3.4-2~),
          libnginx-mod-http-headers-more-filter (>= 1:0.34-2~),
-         libnginx-mod-http-image-filter (= ${binary:Version}),
+         libnginx-mod-http-image-filter (>= ${source:Version}),
+         libnginx-mod-http-image-filter (<< ${source:Version}.1~),
          libnginx-mod-http-lua (>=1:0.10.22-3~) [amd64 arm64 armel armhf i386 mips64el mipsel s390x powerpc],
-         libnginx-mod-http-perl (= ${binary:Version}),
+         libnginx-mod-http-perl (>= ${source:Version}),
+         libnginx-mod-http-perl (<< ${source:Version}.1~),
          libnginx-mod-http-subs-filter (>= 1:0.6.4-2~),
          libnginx-mod-http-uploadprogress (>= 1:0.9.2-2~),
          libnginx-mod-http-upstream-fair (>= 1:0.0~git20120408.a18b409-2~),
-         libnginx-mod-http-xslt-filter (= ${binary:Version}),
-         libnginx-mod-mail (= ${binary:Version}),
+         libnginx-mod-http-xslt-filter (>= ${source:Version}),
+         libnginx-mod-http-xslt-filter (<< ${source:Version}.1~),
+         libnginx-mod-mail (>= ${source:Version}),
+         libnginx-mod-mail (<< ${source:Version}.1~),
          libnginx-mod-nchan (>= 1:1.3.5+dfsg-3~),
-         libnginx-mod-stream (= ${binary:Version}),
-         libnginx-mod-stream-geoip (= ${binary:Version}),
+         libnginx-mod-stream (>= ${source:Version}),
+         libnginx-mod-stream (<< ${source:Version}.1~),
+         libnginx-mod-stream-geoip (>= ${source:Version}),
+         libnginx-mod-stream-geoip (<< ${source:Version}.1~),
          libnginx-mod-stream-geoip2 (>= 1:3.4-2~),
-         nginx-common (<< ${source:Version}.1~),
-         nginx-common (>= ${source:Version}),
-         iproute2,
+         nginx-bin (>= ${source:Version}),
+         nginx-bin (<< ${source:Version}.1~),
          ${misc:Depends},
          ${shlibs:Depends}
 Provides: httpd, httpd-cgi, nginx
-Conflicts: nginx-core, nginx-light
 Suggests: nginx-doc (= ${source:Version})
 Description: nginx web/proxy server (extended version)
  Nginx ("engine X") is a high-performance web and reverse proxy server
  created by Igor Sysoev. It can be used both as a standalone web server
  and as a proxy to reduce the load on back-end HTTP or mail servers.
  .
- This package provides a version of nginx with the standard modules, plus
+ This metapackage provides a version of nginx with the standard modules, plus
  extra features and modules such as the Perl module, which allows the
  addition of Perl in configuration files.
  .
