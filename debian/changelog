@@ -9,7 +9,7 @@ nginx (1.22.1-6) UNRELEASED; urgency=medium
     nginx-{light,core,extras,full} are deprecated
   * d/control: fixed dependencies for safe binNMU
   * d/copyright: updated debian/* copyright
-  * d/copyright: added missing copyright for debian/apport/* 
+  * d/copyright: added missing copyright for debian/apport/*
   * d/copyright: added missing GPL-2+ copyright for debian/debhelper/dh_nginx
   * d/copyright: added missing copyright for debian/help/examples/nginx_modsite
 
