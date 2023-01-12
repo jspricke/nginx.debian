@@ -8,6 +8,7 @@ nginx (1.22.1-6) UNRELEASED; urgency=medium
   * d/nginx-{light,core,extras,full}.{postinst,NEWS}: added warning that
     nginx-{light,core,extras,full} are deprecated
   * d/control: fixed dependencies for safe binNMU
+  * d/copyright: updated debian/* copyright
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 05 Jan 2023 19:10:50 +0100
 
