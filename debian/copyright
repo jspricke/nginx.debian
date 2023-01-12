@@ -48,6 +48,10 @@ Copyright: 2022, 2023, Jan Mojžíš <jan.mojzis@gmail.com>
   2007-2009, Fabio Tranchitella <kobold@debian.org>
 License: BSD-2-clause
 
+Files: debian/apport/*
+Copyright: 2015, Thomas Ward <teward@ubuntu.com>
+License: BSD-2-clause
+
 Files: debian/debhelper/*
 Copyright: 2022 Miao Wang
 License: Expat

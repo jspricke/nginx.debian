@@ -9,6 +9,7 @@ nginx (1.22.1-6) UNRELEASED; urgency=medium
     nginx-{light,core,extras,full} are deprecated
   * d/control: fixed dependencies for safe binNMU
   * d/copyright: updated debian/* copyright
+  * d/copyright: added missing copyright for debian/apport/* 
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 05 Jan 2023 19:10:50 +0100
 
