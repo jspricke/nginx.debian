@@ -64,6 +64,10 @@ Files: debian/debhelper/nginx_mod.pm
 Copyright: © 2022, Miao Wang
 License: BSD-2-clause
 
+Files: debian/help/examples/nginx_modsite
+Copyright: 2010, Michael Lustfield <mtecknology@ubuntu.com>
+License: BSD-2-clause
+
 License: BSD-2-clause
  All rights reserved.
  .
