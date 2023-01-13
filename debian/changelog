@@ -12,6 +12,7 @@ nginx (1.22.1-6) UNRELEASED; urgency=medium
   * d/copyright: added missing copyright for debian/apport/*
   * d/copyright: added missing GPL-2+ copyright for debian/debhelper/dh_nginx
   * d/copyright: added missing copyright for debian/help/examples/nginx_modsite
+  * d/po/it.po: added Italian debconf translation. (Closes: 1019160)
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 05 Jan 2023 19:10:50 +0100
 
