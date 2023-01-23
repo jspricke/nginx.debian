@@ -5,7 +5,7 @@ nginx (1.22.1-6) UNRELEASED; urgency=medium
     and marked as deprecated. (Closes: 1025763)
     Users should simply install 'nginx' and 'libnginx-mod-...'
     instead of these packages.
-  * d/nginx-{light,core,extras,full}.{postinst,NEWS}: added warning that
+  * d/nginx-{light,core,extras,full}.NEWS: added warning that
     nginx-{light,core,extras,full} are deprecated
   * d/control: fixed dependencies for safe binNMU
   * d/copyright: updated debian/* copyright
