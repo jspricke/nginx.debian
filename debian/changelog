@@ -14,6 +14,8 @@ nginx (1.22.1-6) UNRELEASED; urgency=medium
   * d/copyright: added missing copyright for debian/help/examples/nginx_modsite
   * d/po/it.po: added Italian debconf translation. (Closes: 1019160)
   * d/control: removed dependency on obsolete package lsb-base
+  * d/p/bug-973861: added, lingering close for connections with pipelined
+    requests. The patch is backported from the upstream. (Closes: 973861)
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 05 Jan 2023 19:10:50 +0100
 
