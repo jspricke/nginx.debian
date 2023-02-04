@@ -1,6 +1,6 @@
 nginx (1.22.1-6) UNRELEASED; urgency=medium
 
-  * d/{control,rules}: moved nginx binary to a new package nginx-bin.
+  * d/{control,rules}: moved nginx binary to package nginx.
     The packages nginx-{light,core,extras} are replaced by a metapackage
     and marked as deprecated. (Closes: 1025763)
     Users should simply install 'nginx' and 'libnginx-mod-...'
