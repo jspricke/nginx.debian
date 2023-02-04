@@ -24,10 +24,9 @@ Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          iproute2,
-         nginx-common (<< ${source:Version}.1~),
-         nginx-common (>= ${source:Version}),
-Breaks: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
-Replaces: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
+Breaks: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~), nginx-common (<< 1.22.1-6~)
+Replaces: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~), nginx-common (<< 1.22.1-6~)
+Suggests: fcgiwrap, nginx-doc, ssl-cert
 Provides: httpd, httpd-cgi, nginx
 Description: small, powerful, scalable web/proxy server
  Nginx ("engine X") is a high-performance web and reverse proxy server
@@ -49,15 +48,17 @@ Description: small, powerful, scalable web/proxy server - documentation
 Package: nginx-common
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
+         nginx (<< ${source:Version}.1~),
+         nginx (>= ${source:Version}),
 Suggests: fcgiwrap, nginx-doc, ssl-cert
 Description: small, powerful, scalable web/proxy server - common files
  Nginx ("engine X") is a high-performance web and reverse proxy server
  created by Igor Sysoev. It can be used both as a standalone web server
  and as a proxy to reduce the load on back-end HTTP or mail servers.
  .
- This package contains base configuration files used by all versions of
- nginx.
+ From nginx version 1.22.1-6 changed to dependency metapackage,
+ can be safely removed.
 
 Package: nginx-dev
 Architecture: all
