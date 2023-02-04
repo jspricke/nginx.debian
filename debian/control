@@ -20,40 +20,18 @@ Vcs-Browser: https://salsa.debian.org/nginx-team/nginx
 Rules-Requires-Root: no
 
 Package: nginx
-Architecture: all
-Depends: nginx-bin (<< ${source:Version}.1~),
-         nginx-bin (>= ${source:Version}),
-         ${misc:Depends}
+Architecture: any
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+         iproute2,
+         nginx-common (<< ${source:Version}.1~),
+         nginx-common (>= ${source:Version}),
+Breaks: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
+Replaces: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
 Description: small, powerful, scalable web/proxy server
  Nginx ("engine X") is a high-performance web and reverse proxy server
  created by Igor Sysoev. It can be used both as a standalone web server
  and as a proxy to reduce the load on back-end HTTP or mail servers.
- .
- This is a dependency package to install either nginx-core (by default),
- nginx-full, nginx-light or nginx-extras.
-
-Package: nginx-bin
-Architecture: any
-Depends: iproute2,
-         nginx-common (<< ${source:Version}.1~),
-         nginx-common (>= ${source:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Breaks: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
-Replaces: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~),
-Provides: httpd, httpd-cgi, nginx
-Suggests: nginx-doc (= ${source:Version})
-Description: nginx web/proxy server (standard version)
- Nginx ("engine X") is a high-performance web and reverse proxy server
- created by Igor Sysoev. It can be used both as a standalone web server
- and as a proxy to reduce the load on back-end HTTP or mail servers.
- .
- This package contains nginx binary with the complete set of standard modules
- included.
- .
- STANDARD HTTP MODULES: Core, Access, Auth Basic, Auto Index, Browser, Empty
- GIF, FastCGI, Geo, Limit Connections, Limit Requests, Map, Memcached, Proxy,
- Referer, Rewrite, SCGI, Split Clients, UWSGI.
 
 Package: nginx-doc
 Architecture: all
@@ -84,8 +62,8 @@ Package: nginx-dev
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${S:Build-Depends},
-         nginx-bin (<< ${source:Version}.1~),
-         nginx-bin (>= ${source:Version}),
+         nginx (<< ${source:Version}.1~),
+         nginx (>= ${source:Version}),
 Provides: dh-sequence-nginx
 Description: nginx web/proxy server - development headers
  Nginx ("engine X") is a high-performance web and reverse proxy server
@@ -110,8 +88,8 @@ Depends: libnginx-mod-http-geoip (>= ${source:Version}),
          libnginx-mod-stream (<< ${source:Version}.1~),
          libnginx-mod-stream-geoip (>= ${source:Version}),
          libnginx-mod-stream-geoip (<< ${source:Version}.1~),
-         nginx-bin (>= ${source:Version}),
-         nginx-bin (<< ${source:Version}.1~),
+         nginx (>= ${source:Version}),
+         nginx (<< ${source:Version}.1~),
          ${misc:Depends},
          ${shlibs:Depends}
 Breaks: nginx-full (<< 1.18.0-1),
@@ -149,8 +127,8 @@ Depends: libnginx-mod-http-auth-pam,
          libnginx-mod-http-subs-filter,
          libnginx-mod-http-upstream-fair,
          libnginx-mod-stream-geoip2,
-         nginx-bin (>= ${source:Version}),
-         nginx-bin (<< ${source:Version}.1~),
+         nginx (>= ${source:Version}),
+         nginx (<< ${source:Version}.1~),
          ${misc:Depends},
          ${shlibs:Depends}
 Provides: httpd, httpd-cgi, nginx
@@ -183,8 +161,8 @@ Description: nginx web/proxy server (standard version with 3rd parties)
 Package: nginx-light
 Architecture: all
 Depends: libnginx-mod-http-echo (>= 1:0.63-3~),
-         nginx-bin (>= ${source:Version}),
-         nginx-bin (<< ${source:Version}.1~),
+         nginx (>= ${source:Version}),
+         nginx (<< ${source:Version}.1~),
          ${misc:Depends},
          ${shlibs:Depends}
 Provides: httpd, httpd-cgi, nginx
@@ -228,7 +206,7 @@ Depends: libnginx-mod-http-auth-pam (>= 1:1.5.3-2~),
          libnginx-mod-stream (= ${binary:Version}),
          libnginx-mod-stream-geoip (= ${binary:Version}),
          libnginx-mod-stream-geoip2 (>= 1:3.4-2~),
-         nginx-bin (= ${binary:Version}),
+         nginx (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Provides: httpd, httpd-cgi, nginx
