@@ -37,8 +37,8 @@ sub new {
 	my $this= $class->SUPER::new(@_);
 	$this->prefer_out_of_source_building(@_);
 	$this->{has_ndk} = $this->has_build_dep("libnginx-mod-http-ndk-dev");
-	if ($this->{has_ndk} == 1){
-		foreach my $cur (getpackages('arch')) {
+	foreach my $cur (getpackages('arch')) {
+		if ($this->{has_ndk} == 1) {
 			addsubstvar($cur, "misc:Depends", "libnginx-mod-http-ndk");
 		}
 	}

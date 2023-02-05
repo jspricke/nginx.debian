@@ -27,7 +27,7 @@ Depends: ${misc:Depends},
 Breaks: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~), nginx-common (<< 1.22.1-6~)
 Replaces: nginx-light (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-core (<< 1.22.1-6~), nginx-common (<< 1.22.1-6~)
 Suggests: fcgiwrap, nginx-doc, ssl-cert
-Provides: httpd, httpd-cgi
+Provides: httpd, httpd-cgi, ${nginx:abi}
 Description: small, powerful, scalable web/proxy server
  Nginx ("engine X") is a high-performance web and reverse proxy server
  created by Igor Sysoev. It can be used both as a standalone web server
@@ -157,7 +157,7 @@ Description: nginx web/proxy server (standard version with 3rd parties)
 
 Package: nginx-light
 Architecture: all
-Depends: libnginx-mod-http-echo (>= 1:0.63-3~),
+Depends: libnginx-mod-http-echo (>= ${libnginx-mod-http-echo:Version}~),
          nginx (>= ${source:Version}),
          nginx (<< ${source:Version}.1~),
          ${misc:Depends},
@@ -181,27 +181,27 @@ Description: nginx web/proxy server (basic version)
 
 Package: nginx-extras
 Architecture: any
-Depends: libnginx-mod-http-auth-pam (>= 1:1.5.3-2~),
-         libnginx-mod-http-cache-purge (>= 1:2.3-3~),
-         libnginx-mod-http-dav-ext (>= 1:3.0.0-2~),
-         libnginx-mod-http-echo (>= 1:0.63-3~),
-         libnginx-mod-http-fancyindex (>= 1:0.5.2-2~),
+Depends: nginx (= ${binary:Version}),
          libnginx-mod-http-geoip (= ${binary:Version}),
-         libnginx-mod-http-geoip2 (>= 1:3.4-2~),
-         libnginx-mod-http-headers-more-filter (>= 1:0.34-2~),
          libnginx-mod-http-image-filter (= ${binary:Version}),
-         libnginx-mod-http-lua (>=1:0.10.22-3~) [amd64 arm64 armel armhf i386 mips64el mipsel s390x powerpc],
          libnginx-mod-http-perl (= ${binary:Version}),
-         libnginx-mod-http-subs-filter (>= 1:0.6.4-2~),
-         libnginx-mod-http-uploadprogress (>= 1:0.9.2-2~),
-         libnginx-mod-http-upstream-fair (>= 1:0.0~git20120408.a18b409-2~),
          libnginx-mod-http-xslt-filter (= ${binary:Version}),
          libnginx-mod-mail (= ${binary:Version}),
-         libnginx-mod-nchan (>= 1:1.3.5+dfsg-3~),
          libnginx-mod-stream (= ${binary:Version}),
          libnginx-mod-stream-geoip (= ${binary:Version}),
-         libnginx-mod-stream-geoip2 (>= 1:3.4-2~),
-         nginx (= ${binary:Version}),
+         libnginx-mod-http-auth-pam (>= ${libnginx-mod-http-auth-pam:Version}~),
+         libnginx-mod-http-cache-purge (>= ${libnginx-mod-http-cache-purge:Version}~),
+         libnginx-mod-http-dav-ext (>= ${libnginx-mod-http-dav-ext:Version}~),
+         libnginx-mod-http-echo (>= ${libnginx-mod-http-echo:Version}~),
+         libnginx-mod-http-fancyindex (>= ${libnginx-mod-http-fancyindex:Version}~),
+         libnginx-mod-http-geoip2 (>= ${libnginx-mod-geoip2:Version}~),
+         libnginx-mod-http-headers-more-filter (>= ${libnginx-mod-http-headers-more-filter:Version}~),
+         libnginx-mod-http-lua (>=${libnginx-mod-http-lua:Version}~) [amd64 arm64 armel armhf i386 mips64el mipsel s390x powerpc],
+         libnginx-mod-http-subs-filter (>= ${libnginx-mod-http-subs-filter:Version}~),
+         libnginx-mod-http-uploadprogress (>= ${libnginx-mod-http-uploadprogress:Version}~),
+         libnginx-mod-http-upstream-fair (>= ${libnginx-mod-http-upstream-fair:Version}~),
+         libnginx-mod-nchan (>= ${libnginx-mod-nchan:Version}~),
+         libnginx-mod-stream-geoip2 (>= ${libnginx-mod-geoip2:Version}~),
          ${misc:Depends},
          ${shlibs:Depends}
 Description: nginx web/proxy server (extended version)

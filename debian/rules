@@ -104,6 +104,9 @@ override_dh_installinit:
 #override_dh_installlogrotate:
 #	dh_installlogrotate --package nginx --name=nginx
 
+override_dh_gencontrol:
+	dh_gencontrol -- -Tdebian/substvars -Tdebian/libnginx-mod.abisubstvars
+
 build.arch.%:
 	$(MAKE) -C $(BUILDDIR_$*) build
 
