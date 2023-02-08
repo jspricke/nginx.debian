@@ -17,6 +17,7 @@ nginx (1.22.1-6) UNRELEASED; urgency=medium
     * d/copyright: added missing copyright for d/help/examples/nginx_modsite
     * d/po/it.po: added Italian debconf translation. (Closes: 1019160)
     * d/control: removed dependency on obsolete package lsb-base
+    * d/control: bump Standards-Version: 4.6.2, no changes
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 05 Jan 2023 19:10:50 +0100
 
