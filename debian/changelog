@@ -1,8 +1,8 @@
-nginx (1.22.1-6) UNRELEASED; urgency=medium
+nginx (1.22.1-6) unstable; urgency=medium
 
   * Main change:
     Nginx binary moved to package nginx, also moved basic
-    configuration files from nginx-common back to package nginx.
+    configuration files from nginx-common to package nginx.
     The packages nginx-{light,core,extras,common} are replaced
     by a metapackage. (Closes: 1025763)
     Users should simply install 'nginx' and 'libnginx-mod-...'
@@ -19,7 +19,7 @@ nginx (1.22.1-6) UNRELEASED; urgency=medium
     * d/control: removed dependency on obsolete package lsb-base
     * d/control: bump Standards-Version: 4.6.2, no changes
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 05 Jan 2023 19:10:50 +0100
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Wed, 08 Feb 2023 17:20:27 +0100
 
 nginx (1.22.1-5) unstable; urgency=medium
 
