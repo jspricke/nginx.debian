@@ -1,20 +1,22 @@
 nginx (1.22.1-6) UNRELEASED; urgency=medium
 
-  * d/{control,rules}: nginx binary moved to package nginx, also moved basic
+  * Main change:
+    Nginx binary moved to package nginx, also moved basic
     configuration files from nginx-common back to package nginx.
     The packages nginx-{light,core,extras,common} are replaced
-    by a metapackage and marked as deprecated. (Closes: 1025763)
+    by a metapackage. (Closes: 1025763)
     Users should simply install 'nginx' and 'libnginx-mod-...'
     instead of these packages.
-  * d/nginx-{light,core,extras,full,common}.NEWS: added warning that
-    nginx-{light,core,extras,full,common} are deprecated
-  * d/control: fixed dependencies for safe binNMU
-  * d/copyright: updated debian/* copyright
-  * d/copyright: added missing copyright for debian/apport/*
-  * d/copyright: added missing GPL-2+ copyright for debian/debhelper/dh_nginx
-  * d/copyright: added missing copyright for debian/help/examples/nginx_modsite
-  * d/po/it.po: added Italian debconf translation. (Closes: 1019160)
-  * d/control: removed dependency on obsolete package lsb-base
+  * Additional changes:
+    * d/nginx-{light,core,extras,full,common}.NEWS: added warning that
+      nginx-{light,core,extras,full,common} are deprecated
+    * d/control: fixed dependencies for safe binNMU
+    * d/copyright: updated debian/* copyright
+    * d/copyright: added missing copyright for d/apport/*
+    * d/copyright: added missing GPL-2+ copyright for d/debhelper/dh_nginx
+    * d/copyright: added missing copyright for d/help/examples/nginx_modsite
+    * d/po/it.po: added Italian debconf translation. (Closes: 1019160)
+    * d/control: removed dependency on obsolete package lsb-base
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Thu, 05 Jan 2023 19:10:50 +0100
 
