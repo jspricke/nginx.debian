@@ -7,6 +7,7 @@ nginx (1.22.1-7) UNRELEASED; urgency=medium
   * d/p/bug-973861: added, lingering close for connections with pipelined
     requests. The patch is backported from the upstream. (Closes: 973861)
   * d/gbb.conf: switched to debian branch main (debian-branch = main)
+  * d/copyright: updated to be compatible with 'cme update dpkg-copyright'
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 10 Feb 2023 17:28:46 +0100
 
