@@ -1,4 +1,4 @@
-nginx (1.22.1-7) UNRELEASED; urgency=medium
+nginx (1.22.1-7) unstable; urgency=medium
 
   * nginx ABI release: nginx-abi-1.22.1-7
   * nginx ABI: Nginx now provides nginx-abi-<VERSION> to better manage
@@ -9,7 +9,7 @@ nginx (1.22.1-7) UNRELEASED; urgency=medium
   * d/gbb.conf: switched to debian branch main (debian-branch = main)
   * d/copyright: updated to be compatible with 'cme update dpkg-copyright'
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 10 Feb 2023 17:28:46 +0100
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Mon, 13 Feb 2023 13:04:16 +0100
 
 nginx (1.22.1-6) unstable; urgency=medium
 
