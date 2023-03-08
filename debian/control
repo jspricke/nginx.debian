@@ -119,13 +119,13 @@ Description: nginx web/proxy server (standard version)
 
 Package: nginx-full
 Architecture: all
-Depends: libnginx-mod-http-auth-pam,
-         libnginx-mod-http-dav-ext,
-         libnginx-mod-http-echo,
-         libnginx-mod-http-geoip2,
-         libnginx-mod-http-subs-filter,
-         libnginx-mod-http-upstream-fair,
-         libnginx-mod-stream-geoip2,
+Depends: libnginx-mod-http-auth-pam (>= ${libnginx-mod-http-auth-pam:Version}~),
+         libnginx-mod-http-dav-ext (>= ${libnginx-mod-http-dav-ext:Version}~),
+         libnginx-mod-http-echo (>= ${libnginx-mod-http-echo:Version}~),
+         libnginx-mod-http-geoip2 (>= ${libnginx-mod-geoip2:Version}~),
+         libnginx-mod-http-subs-filter (>= ${libnginx-mod-http-subs-filter:Version}~),
+         libnginx-mod-http-upstream-fair (>= ${libnginx-mod-http-upstream-fair:Version}~),
+         libnginx-mod-stream-geoip2 (>= ${libnginx-mod-geoip2:Version}~),
          nginx (>= ${source:Version}),
          nginx (<< ${source:Version}.1~),
          ${misc:Depends},
