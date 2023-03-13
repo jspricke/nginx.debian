@@ -1,5 +1,9 @@
 nginx (1.22.1-8) UNRELEASED; urgency=medium
 
+  * Main change:
+    Configuration files returned to nginx-common package. This fixes
+    the serious problem of losing configuration files during upgrade.
+    This is a rollback of a change made in 1.22.1-6 (Closes: 1032517)
   * d/control: fix nginx-full dependencies
   * d/libnginx-mod.abisubstvars: update libnginx-mod-http-lua version
 
