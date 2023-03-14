@@ -1,4 +1,4 @@
-nginx (1.22.1-8) UNRELEASED; urgency=medium
+nginx (1.22.1-8) unstable; urgency=medium
 
   * Main change:
     Configuration files returned to nginx-common package. This fixes
@@ -7,7 +7,7 @@ nginx (1.22.1-8) UNRELEASED; urgency=medium
   * d/control: fix nginx-full dependencies
   * d/libnginx-mod.abisubstvars: update libnginx-mod-http-lua version
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Wed, 08 Mar 2023 21:43:50 +0100
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 14 Mar 2023 06:53:32 +0100
 
 nginx (1.22.1-7) unstable; urgency=medium
 
