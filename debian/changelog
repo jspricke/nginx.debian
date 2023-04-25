@@ -1,3 +1,9 @@
+nginx (1.24.0-1) UNRELEASED; urgency=medium
+
+  * New upstream version 1.24.0 
+
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 25 Apr 2023 22:36:57 +0200
+
 nginx (1.22.1-9) unstable; urgency=medium
 
   * d/control: nginx-common Breaks+Replaces: nginx (<< 1.22.1-8)
