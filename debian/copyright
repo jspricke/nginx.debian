@@ -186,6 +186,10 @@ Copyright: Roman Arutyunyan
  Nginx, Inc.
 License: BSD-2-clause
 
+Files: src/event/ngx_event_udp.h
+Copyright: Nginx, Inc.
+License: BSD-2-clause
+
 Files: src/http/modules/ngx_http_auth_request_module.c
   src/http/modules/ngx_http_grpc_module.c
   src/http/modules/ngx_http_upstream_keepalive_module.c
@@ -283,6 +287,12 @@ License: BSD-2-clause
 Files: src/os/unix/ngx_setaffinity.c
   src/os/unix/ngx_setaffinity.h
 Copyright: Nginx, Inc.
+License: BSD-2-clause
+
+Files: src/os/win32/ngx_dlopen.c
+  src/os/win32/ngx_dlopen.h
+Copyright: Nginx, Inc.
+ Maxim Dounin
 License: BSD-2-clause
 
 Files: src/stream/ngx_stream.c
