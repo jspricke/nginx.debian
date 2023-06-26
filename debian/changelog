@@ -2,6 +2,8 @@ nginx (1.24.0-1) UNRELEASED; urgency=medium
 
   * New upstream version 1.24.0 
   * nginx ABI release: nginx-abi-1.24.0-1
+  * d/libnginx-mod.abisubstvars update version constraints of the 3rd party
+    modules
   * d/p/bug-{1024605,973861}.patch removed, fixed in upstream
   * d/copyright: updated copyright for files src/event/ngx_event_udp.h,
     src/os/win32/ngx_dlopen
