@@ -1,4 +1,4 @@
-nginx (1.24.0-1) UNRELEASED; urgency=medium
+nginx (1.24.0-1~exp1) experimental; urgency=medium
 
   * New upstream version 1.24.0
   * nginx ABI release: nginx-abi-1.24.0-1
@@ -8,7 +8,7 @@ nginx (1.24.0-1) UNRELEASED; urgency=medium
   * d/copyright: updated copyright for files src/event/ngx_event_udp.h,
     src/os/win32/ngx_dlopen
 
- -- Jan Mojžíš <jan.mojzis@gmail.com>  Tue, 25 Apr 2023 22:36:57 +0200
+ -- Jan Mojžíš <jan.mojzis@gmail.com>  Mon, 26 Jun 2023 15:21:06 +0200
 
 nginx (1.22.1-9) unstable; urgency=medium
 
