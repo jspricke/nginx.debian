@@ -51,7 +51,9 @@ Breaks: nginx (<< 1.22.1-8)
 Replaces: nginx (<< 1.22.1-8)
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
+         nginx (>= ${source:Version}),
+         nginx (<< ${source:Version}.1~),
 Suggests: fcgiwrap, nginx-doc, ssl-cert
 Description: small, powerful, scalable web/proxy server - common files
  Nginx ("engine X") is a high-performance web and reverse proxy server
