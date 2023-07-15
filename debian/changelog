@@ -12,6 +12,8 @@ nginx (1.24.0-2) UNRELEASED; urgency=medium
   * d/rules replaced '--dbgsym-migration='nginx-dbg (<< 1.10.1-3~)' by
     -O--automatic-dbgsym, and fixed debug-symbol-migration-possibly-complete
     lintian warning
+  * d/po/ro.po added Romanian debconf translation. (Closes: 1033084),
+    Thanks to Remus-Gabriel Chelu
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 30 Jun 2023 09:52:25 +0200
 
