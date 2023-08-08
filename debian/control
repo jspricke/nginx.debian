@@ -66,8 +66,7 @@ Package: nginx-dev
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${S:Build-Depends},
-         nginx (<< ${source:Version}.1~),
-         nginx (>= ${source:Version}),
+         ${nginx:abi},
 Provides: dh-sequence-nginx
 Description: nginx web/proxy server - development headers
  Nginx ("engine X") is a high-performance web and reverse proxy server
