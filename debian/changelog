@@ -13,6 +13,8 @@ nginx (1.24.0-2) UNRELEASED; urgency=medium
     already done, fixes debug-symbol-migration-possibly-complete lint. warning
   * d/po/ro.po added Romanian debconf translation. (Closes: 1033084),
     Thanks to Remus-Gabriel Chelu
+  * d/po/sv.po added Swedish debconf translation. (Closes: 1050443),
+    Thanks to Peter Kvillegård
   * d/conf/mime.types added video/ogg, video/x-matroska (Closes: 1028144)
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 30 Jun 2023 09:52:25 +0200
