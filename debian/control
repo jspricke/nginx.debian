@@ -66,6 +66,7 @@ Package: nginx-dev
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}, ${S:Build-Depends},
+         ${nginx:abi},
          nginx (<< ${source:Version}.1~),
          nginx (>= ${source:Version}),
 Provides: dh-sequence-nginx
