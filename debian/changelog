@@ -16,6 +16,8 @@ nginx (1.24.0-2) UNRELEASED; urgency=medium
   * d/po/sv.po added Swedish debconf translation. (Closes: 1050443),
     Thanks to Peter Kvillegård
   * d/conf/mime.types added video/ogg, video/x-matroska (Closes: 1028144)
+  * d/p/CVE-2023-44487.patch fixes CVE-2023-44487 denial of service (server
+    resource consumption)  (Closes: 1053770)
   * d/control added nginx-dev dependency on ${nginx:abi}
 
  -- Jan Mojžíš <jan.mojzis@gmail.com>  Fri, 30 Jun 2023 09:52:25 +0200
