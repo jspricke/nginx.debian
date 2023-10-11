@@ -1,3 +1,11 @@
+nginx (1.24.0-2.1~1.gbp4eef3c) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @4eef3c8f6e95621070f944940bd381562c9bcb65 **
+
+  * Add DEfO support
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Thu, 12 Oct 2023 08:41:38 +0200
+
 nginx (1.24.0-2) unstable; urgency=medium
 
   * d/control added dependency nginx-common to nginx (Closes: 1039905)

@@ -2,3 +2,4 @@
 nginx-fix-pidfile.patch
 nginx-ssl_cert_cb_yield.patch
 CVE-2023-44487.patch
+0005-Add-DEfO-patch.patch
