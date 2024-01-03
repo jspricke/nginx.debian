@@ -1,0 +1,577 @@
+Package: libnginx-mod-http-geoip-dbgsym
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 50
+Depends: libnginx-mod-http-geoip (= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./libnginx-mod-http-geoip-dbgsym_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 36312
+MD5sum: 80c85e6c943b98c6453b13c2028f7df6
+SHA1: 915750e5accb519aaba522b03b14ef61eb7cf0d0
+SHA256: fde71528fa758b23d2344e81836f637dd6c9ba0d99952beb34530e5ddd8a1dbe
+SHA512: 78f9ab387b512b08863db718705e3a78ff9d12d787933e2f3b1b17bd34e3c984e7abcd6739de281a1efc4f13117cf639a483f0fe4bcbb79780a9d9305262854d
+Description: debug symbols for libnginx-mod-http-geoip
+Build-Ids: 8fa7757a49d376e3e0ac63ad7990b9d1fa7c62e4
+
+Package: libnginx-mod-http-geoip
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 120
+Depends: nginx-abi-1.24.0-1, libc6 (>= 2.14), libgeoip1 (>= 1.6.12)
+Recommends: nginx
+Filename: ./libnginx-mod-http-geoip_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 86508
+MD5sum: ea52776bb434ef783566422d5f3c8495
+SHA1: 40e4fa4fc6ab3274637b2a5c69a10c22e12503a8
+SHA256: c340338eebc794dab1ce4caf4cb89a53886b8634c7bb8d9ebb6836b1c17c28fd
+SHA512: f279aee2c6787a1eca91c778fec2db24d3d4b818fce15b04d7f087aeee29c90ac50a4d44b03916f8689b58e684379b97e3ef178c6b6117e0462c7422b9ca0fd2
+Homepage: https://nginx.org
+Description: GeoIP HTTP module for Nginx
+ The ngx_http_geoip module creates variables with values depending on the
+ client IP address, using the precompiled MaxMind databases.
+ .
+ Those variables include country, region, city, latitude, longitude, postal
+ code, etc.
+
+Package: libnginx-mod-http-image-filter-dbgsym
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 58
+Depends: libnginx-mod-http-image-filter (= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./libnginx-mod-http-image-filter-dbgsym_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 43856
+MD5sum: 8507837765dc97b074cdea9f0237ceae
+SHA1: 4b746356d8d169303e02a3b11e1c3cfe163cd088
+SHA256: 6a7730623e3ab7783a59f63cc78b8349acd65772e1e9fa46af37787485e7a79b
+SHA512: fb21e15aa6b38996a57c6dd8bda94e8da9fe37cf5ae2e5efa48c7295a51b23d302b89ed74047de3b527dff56a8ec127553d9a92a8e9e85194af60fa1383cbabc
+Description: debug symbols for libnginx-mod-http-image-filter
+Build-Ids: f24e21429429e1dbbfe919e787a65b42b61cedd5
+
+Package: libnginx-mod-http-image-filter
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 127
+Depends: nginx-abi-1.24.0-1, libc6 (>= 2.14), libgd3 (>= 2.1.0~alpha~)
+Recommends: nginx
+Filename: ./libnginx-mod-http-image-filter_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 90280
+MD5sum: 6cd95c48601287c842acd08f81d22eaa
+SHA1: 6a71fcfdd026d3a2537042630a5acf8daa451337
+SHA256: 2de416cdfde40c33c4cab5fba01ffd06cb5923934a2af3cddd860f9e1912066c
+SHA512: c9ef17a236b0e87ba2511c2f4c51827543770a9823255535c9a3e26860123c9a3c55645eeadc8f5400e2f9bc384186292b337841a14dd828463ce77b5dad1b6f
+Homepage: https://nginx.org
+Description: HTTP image filter module for Nginx
+ The ngx_http_image_filter module is a filter that transforms images in JPEG,
+ GIF, and PNG formats.
+ .
+ The module supports filters such as rotate, resize, crop, quality, sharpening,
+ interlacing and more.
+
+Package: libnginx-mod-http-perl-dbgsym
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 123
+Depends: libnginx-mod-http-perl (= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./libnginx-mod-http-perl-dbgsym_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 99136
+MD5sum: 37852dea2f10faa312e90d959ac0bc5e
+SHA1: a84a26433de7e271c8be83e7665e89e1ab2e7163
+SHA256: 2e5f3112df1627513bd32169d43bb845f41717652bba3bf8792123638145aae0
+SHA512: c5f7c3d1808a145e9d2f1efe639615a8b186477703197e92b08ff1a779927194fa8635fd517f8199b1cf2944686668e756ca6a689545e4834a5cb6e3c4eac722
+Description: debug symbols for libnginx-mod-http-perl
+Build-Ids: 130c23b5d63819c08ef5acfb1e6d85999c8c2570 5446d543a5a9923d96a8751ba8ce05930d12b3cc
+
+Package: libnginx-mod-http-perl
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 172
+Depends: nginx-abi-1.24.0-1, perl (>= 5.36.0-10), perlapi-5.36.0, libc6 (>= 2.34), libperl5.36 (>= 5.36.0)
+Recommends: nginx
+Filename: ./libnginx-mod-http-perl_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 98428
+MD5sum: d3bd46e25ab07ca6e3948832e9d8ae19
+SHA1: 2506e0d60f5bfe24cbf446cc894ab1e4fa37ad8d
+SHA256: c430141a9ee84ef194289daca0f642656f273da5063911e8ac5b1c6a5a680f01
+SHA512: e1c71716ffb153b785b4b82fd4288567ade6015c18ccd633e0006f6014e9a8d6e82c08dcbedbfbc796fed7dd4b5530bbf74a3675df0b1bce0529284c9564a1ab
+Homepage: https://nginx.org
+Description: Perl module for Nginx
+ Embed Perl runtime into nginx.
+ .
+ The ngx_http_perl module is used to implement location and variable handlers
+ in Perl and insert Perl calls into SSI.
+ .
+ Note that this module is marked experimental.
+
+Package: libnginx-mod-http-xslt-filter-dbgsym
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 67
+Depends: libnginx-mod-http-xslt-filter (= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./libnginx-mod-http-xslt-filter-dbgsym_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 52964
+MD5sum: 15b8e324a865fbed462007ffaa8d48da
+SHA1: 418a591de3823ff9d853e87922f011473be0a6ab
+SHA256: 51cc60d50674a70bab7b4f8ab148c5ad77fa602b7a22478088ce42864fda4006
+SHA512: 4c3ff3c281665318058cc46ef3baddc6a829821e238fdbe190cb0cb4e1e1c8880015b863e0bb82f3d8ce568cb01cfeedc971e0f00f4caf073178cfd358bb21c2
+Description: debug symbols for libnginx-mod-http-xslt-filter
+Build-Ids: c9ef426ce6ba693935887d88b10ea8170ab73a27
+
+Package: libnginx-mod-http-xslt-filter
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 123
+Depends: nginx-abi-1.24.0-1, libc6 (>= 2.14), libxml2 (>= 2.7.4), libxslt1.1 (>= 1.1.25)
+Recommends: nginx
+Filename: ./libnginx-mod-http-xslt-filter_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 88704
+MD5sum: 00a876268dd0468a2733cc602ae6dbff
+SHA1: 5038a2cf2924660903a11044c27a5004c6fe04b6
+SHA256: b74cc9113b3db8b5c493d31f6b14fb5bdb3335638e20cebb6cfec3197d22bddb
+SHA512: 4e56d7fa3aeaeb1507332eacc81e569cb33e1aa08f495ebd8c9359ed501a1d132baf730dd3a4b6b88d65ca4ec0e4d06a7e2274277e96a68b38b6f05895abf4ee
+Homepage: https://nginx.org
+Description: XSLT Transformation module for Nginx
+ The ngx_http_xslt_filter module is a filter that transforms XML responses
+ using one or more XSLT stylesheets.
+ .
+ The transformation can be adjusted by setting the relevant configuration
+ parameters.
+
+Package: libnginx-mod-mail-dbgsym
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 125
+Depends: libnginx-mod-mail (= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./libnginx-mod-mail-dbgsym_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 104276
+MD5sum: def15f23355b6b040f9de2aca051dc3f
+SHA1: dd667ffb5182681161ee52b2cd18242ad960c5b3
+SHA256: 70913a1b9aa0bc95f9892df708bdd95c0a6926a1ec9431ac9aa6a6c38824970d
+SHA512: 020be1a0e6326e50a3e49dde6df033d7fb0949a48f58dc2da8bf3dc6e3778c7cccbd80cc6fe3e25b887c2d5167fce79715cdecaab4d514f5f18d11291891cf86
+Description: debug symbols for libnginx-mod-mail
+Build-Ids: 695d6568bc43599c3c52c16603e4041ccfcddf3b
+
+Package: libnginx-mod-mail
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 215
+Depends: nginx-abi-1.24.0-1, libc6 (>= 2.14)
+Recommends: nginx
+Filename: ./libnginx-mod-mail_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 120532
+MD5sum: 58583c3db5c9dd34ae62634dbcbb21f8
+SHA1: 0866f7195fd937af10a5454a97626b625663fa66
+SHA256: 4f58caa7bfcec98ae5ad5c8b3a35686c80b6b3f6236808d823d8cd213e912a37
+SHA512: 0a45086c183307f913c830c6848b26a8c3671799a4071d32ce5d8a59356805a8566b46c4216bb7db4d6c19e7ecacb74e6decda1bfd4339bd27821c89b20f33e4
+Homepage: https://nginx.org
+Description: Mail module for Nginx
+ The nginx_mail module adds mail proxy support to nginx.
+ .
+ The module supports proxying all the standard mail protocols such as IMAP,
+ POP3 & SMTP.
+
+Package: libnginx-mod-stream-dbgsym
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 204
+Depends: libnginx-mod-stream (= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./libnginx-mod-stream-dbgsym_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 174156
+MD5sum: 99e58d4341427d8de942e786b6b69786
+SHA1: 1693100df7d232f73b797152f6d82bf429356a97
+SHA256: ce7200e6def65557ec4004266339938e109a96f635432ae12225d930cfb2aa35
+SHA512: bec7eeb39c1fcfce4dd5a8527e20bc4690dfd61b63327220dd86956d1f617b83d65c317db50013e02037f46a9348fb449cb97e8cb71d7d62c1bb00264a49a0c1
+Description: debug symbols for libnginx-mod-stream
+Build-Ids: 103fa70caca7632bd70537c342e1ed0fdaaa5af0
+
+Package: libnginx-mod-stream-geoip-dbgsym
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 36
+Depends: libnginx-mod-stream-geoip (= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./libnginx-mod-stream-geoip-dbgsym_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 22072
+MD5sum: d90a812f899857105631f49772d24d5b
+SHA1: 6bac13ce1337e8fc1a168ab36fadabc9c05a0e21
+SHA256: ab8c74354dc7e010ff04effabf5d69e5455af4f88529a6589a9624f1c33bc3b1
+SHA512: dc1003ea928c6b0fca4c1fafc1c2acf0d14e625ca9d456220c06b0c86613fa481aec2766cdbcffab71223142b129f59b188f4410f3af91693777915427410ff1
+Description: debug symbols for libnginx-mod-stream-geoip
+Build-Ids: 2694483a04c5cbfc13fc193e6935b79284fe53af
+
+Package: libnginx-mod-stream-geoip
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 120
+Depends: nginx-abi-1.24.0-1, libc6 (>= 2.14), libgeoip1 (>= 1.6.12), libnginx-mod-stream (= 1.24.0-2.1~1.gbp4eef3c)
+Recommends: nginx
+Filename: ./libnginx-mod-stream-geoip_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 85744
+MD5sum: 6a0b8da2e6433af01fe3d26465d1eb2b
+SHA1: 5526a7a79e2867ca16b98e5d32d78fe63a47fdad
+SHA256: 2ddf99766695670db2c104dd53ef35064c50cbaf695458a9c623da6878f6fe03
+SHA512: 9fde5020adb2998ee02d6c21d31b640722f32d0e72e6e91d5ce0c24917c1bf2d2a23334b45d3d8d3b958f2f7ea751563d768f0b47242a55a564d7f08f5c7fb1b
+Homepage: https://nginx.org
+Description: GeoIP Stream module for Nginx
+ The ngx_stream_geoip module creates variables with values depending on the
+ client IP address, using the precompiled MaxMind databases.
+ .
+ Those variables include country, region, city, latitude, longitude, postal
+ code, etc.
+
+Package: libnginx-mod-stream
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 286
+Depends: nginx-abi-1.24.0-1, libc6 (>= 2.33)
+Recommends: nginx
+Filename: ./libnginx-mod-stream_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 147060
+MD5sum: 08c7b2f62b7b90ba066bb62bc9a08fdc
+SHA1: 433f49b38d8042f5d794cda4b2bda8897f42b394
+SHA256: e993bce0663f25e17ae98567b93c4247c26b8d2ff113038e9110bea00484da87
+SHA512: 5e99603fbb78918344bb951b176cde34b0f74509fa5bbd13dbb074216aa6411a9005f36ec87a91fba0406235d469aeb9bfab71d1ce0cd4678095a83ebfe91911
+Homepage: https://nginx.org
+Description: Stream module for Nginx
+ The nginx_stream module adds stream proxy support to nginx.
+ .
+ Stream module supports loadbalancing & proxying to TCP servers. The module
+ also supports ACLs/connection limiting and configuring multiple operational
+ parameters.
+
+Package: nginx-common
+Architecture: all
+Version: 1.24.0-2.1~1.gbp4eef3c
+Multi-Arch: foreign
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 302
+Depends: debconf (>= 0.5) | debconf-2.0, nginx (>= 1.24.0-2.1~1.gbp4eef3c), nginx (<< 1.24.0-2.1~1.gbp4eef3c.1~)
+Suggests: fcgiwrap, nginx-doc, ssl-cert
+Breaks: nginx (<< 1.22.1-8)
+Replaces: nginx (<< 1.22.1-8)
+Filename: ./nginx-common_1.24.0-2.1~1.gbp4eef3c_all.deb
+Size: 107376
+MD5sum: f7f7ce8dbd66e96fce80f7a647f48268
+SHA1: 380a835aaa60692867c240ef43392b6c5ab0825d
+SHA256: 937443d4df9170d2943b88c3aa8b5dfc15f110b7e3f4673fae04dacfc2413720
+SHA512: 5e247de8d3970bfc774b0cc96f217216609370061ce746bc91f94856a572099c080148d3f742cb7360f933e549883760f05422d0b99b71375331ec9c73d6161d
+Homepage: https://nginx.org
+Description: small, powerful, scalable web/proxy server - common files
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This package contains base configuration files used by all versions of
+ nginx.
+
+Package: nginx-core
+Architecture: all
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 92
+Depends: libnginx-mod-http-geoip (>= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-http-geoip (<< 1.24.0-2.1~1.gbp4eef3c.1~), libnginx-mod-http-image-filter (>= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-http-image-filter (<< 1.24.0-2.1~1.gbp4eef3c.1~), libnginx-mod-http-xslt-filter (>= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-http-xslt-filter (<< 1.24.0-2.1~1.gbp4eef3c.1~), libnginx-mod-mail (>= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-mail (<< 1.24.0-2.1~1.gbp4eef3c.1~), libnginx-mod-stream (>= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-stream (<< 1.24.0-2.1~1.gbp4eef3c.1~), libnginx-mod-stream-geoip (>= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-stream-geoip (<< 1.24.0-2.1~1.gbp4eef3c.1~), nginx (>= 1.24.0-2.1~1.gbp4eef3c), nginx (<< 1.24.0-2.1~1.gbp4eef3c.1~)
+Breaks: nginx-full (<< 1.18.0-1)
+Replaces: nginx-full (<< 1.18.0-1)
+Filename: ./nginx-core_1.24.0-2.1~1.gbp4eef3c_all.deb
+Size: 81844
+MD5sum: c34098806281a749e29a513d66225f17
+SHA1: 96760ef95b09eed18edad08df9853e644d9239ee
+SHA256: 28765a5491d6165dcb2e4a1eff5009aff418c73251014999e2d38b2da4c19f30
+SHA512: 6251d8dad78b600a5e81060a359c7ea8e64f1be869030475d0aa5776bc1760e59150630dd88529c2c95bb15dcfc4029326a0ce57af662e9799c544703e7316a0
+Homepage: https://nginx.org
+Description: nginx web/proxy server (standard version)
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This metapackage provides a version of nginx identical to that of nginx-full,
+ but without any third-party modules, and only modules in the original
+ nginx code base.
+ .
+ STANDARD HTTP MODULES: Core, Access, Auth Basic, Auto Index, Browser, Empty
+ GIF, FastCGI, Geo, Limit Connections, Limit Requests, Map, Memcached, Proxy,
+ Referer, Rewrite, SCGI, Split Clients, UWSGI.
+ .
+ OPTIONAL HTTP MODULES: Addition, Auth Request, Charset, WebDAV, GeoIP, Gunzip,
+ Gzip, Gzip Precompression, Headers, HTTP/2, Image Filter, Index, Log, Real IP,
+ Slice, SSI, SSL, SSL Preread, Stub Status, Substitution, Thread  Pool,
+ Upstream, User ID, XSLT.
+ .
+ OPTIONAL MAIL MODULES: Mail Core, Auth HTTP, Proxy, SSL, IMAP, POP3, SMTP.
+ .
+ OPTIONAL STREAM MODULES: Stream Core, GeoIP
+
+Package: nginx-dbgsym
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Auto-Built-Package: debug-symbols
+Priority: optional
+Section: debug
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 1224
+Depends: nginx (= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./nginx-dbgsym_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 1128064
+MD5sum: 8cb3f9af32f1de575a2c0c966e2a3ef3
+SHA1: 6675da5b9432b971635c4e44fac00d117847c741
+SHA256: 28124cc76ccefe8c432ec486f11b256998e382edc18333fc4e672401ffdef512
+SHA512: 1e94547d9da489a1f460bf29cfee8c570d31ae253465ce6c45ca5387937e2e689a7044109f530d520f15f8dcf0de9934473e9e19b9d59eb98c26d1d073a2f084
+Description: debug symbols for nginx
+Build-Ids: 5909a4caa43c2d0d08f1fce245897469748c79ae
+
+Package: nginx-dev
+Architecture: all
+Version: 1.24.0-2.1~1.gbp4eef3c
+Multi-Arch: foreign
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 841
+Provides: dh-sequence-nginx
+Depends: debhelper-compat (= 13), libexpat-dev, libgd-dev, libgeoip-dev, libpcre2-dev, libperl-dev, libssl-dev, libxslt1-dev, po-debconf, zlib1g-dev, nginx-abi-1.24.0-1, nginx (<< 1.24.0-2.1~1.gbp4eef3c.1~), nginx (>= 1.24.0-2.1~1.gbp4eef3c)
+Filename: ./nginx-dev_1.24.0-2.1~1.gbp4eef3c_all.deb
+Size: 185052
+MD5sum: 970343ee0bc00e485e346867d415d773
+SHA1: ed6bc4e61a60bcee05c8c1da6654a75f92a358e4
+SHA256: 305ae83da8882c3ec6df18f80813eae7671df1877fef94f2c944b7f394064150
+SHA512: 9f63ca61f4cc3e364461ec6f5fc77d12d2c22aa2f80eb6f144157cdeafdc6a59a561a29345221e5f0d55830f41eb003a268dcb3d556528c7bd817b6ef32ecdf4
+Homepage: https://nginx.org
+Description: nginx web/proxy server - development headers
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This package provides development headers and necessary config scripts
+ for the nginx web/proxy server, useful to develop and link third party
+ additions to the Debian nginx web/proxy server packages.
+
+Package: nginx-doc
+Architecture: all
+Version: 1.24.0-2.1~1.gbp4eef3c
+Multi-Arch: foreign
+Priority: optional
+Section: doc
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 126
+Filename: ./nginx-doc_1.24.0-2.1~1.gbp4eef3c_all.deb
+Size: 89872
+MD5sum: b49b41103968481761cc6eaf4d3d5035
+SHA1: 719cf8905807aef7553bbb614ab04220c551560e
+SHA256: 1cc10252a9ec08ba9f43a1d9df9c2008a2371007f171203d7d48b0ce8bb78c0a
+SHA512: 525e87404056bc5b64e024759aedfaab26fa6981f9ddaf086c21a7fd54226efc3a60b2b275c83789055752e0a43038e4b53794d45fd1d007e326f6acf033acfc
+Homepage: https://nginx.org
+Description: small, powerful, scalable web/proxy server - documentation
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This package provides extra documentation to help unleash the power of Nginx.
+
+Package: nginx-extras
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 92
+Depends: nginx (= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-http-geoip (= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-http-image-filter (= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-http-perl (= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-http-xslt-filter (= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-mail (= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-stream (= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-stream-geoip (= 1.24.0-2.1~1.gbp4eef3c), libnginx-mod-http-auth-pam (>= 1:1.5.3-4~), libnginx-mod-http-cache-purge (>= 1:2.3-5~), libnginx-mod-http-dav-ext (>= 1:3.0.0-4~), libnginx-mod-http-echo (>= 1:0.63-5~), libnginx-mod-http-fancyindex (>= 1:0.5.2-4~), libnginx-mod-http-geoip2 (>= 1:3.4-4~), libnginx-mod-http-headers-more-filter (>= 1:0.34-4~), libnginx-mod-http-lua (>= 1:0.10.23-2~), libnginx-mod-http-subs-filter (>= 1:0.6.4-5~), libnginx-mod-http-uploadprogress (>= 1:0.9.2-4~), libnginx-mod-http-upstream-fair (>= 1:0.0~git20120408.a18b409-4~), libnginx-mod-nchan (>= 1:1.3.6+dfsg-3~), libnginx-mod-stream-geoip2 (>= 1:3.4-4~)
+Filename: ./nginx-extras_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 82080
+MD5sum: a166cce4cf936609a9e138de9bf662ce
+SHA1: f1a9b7c1506ceb00b6007dadcb7c69fc82792e0b
+SHA256: 28142761469d1f920eebb44ec5facfe31068db834082b2ff7ee47339f6f7310c
+SHA512: 3a774964c9dee3adb835b134787af4b9bec179efb3c2050bde91d6f5d746ef4b932e62bc19852303520cae7485e65a214c62ab6b7f5532483a7aac097b731a93
+Homepage: https://nginx.org
+Description: nginx web/proxy server (extended version)
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This metapackage provides a version of nginx with the standard modules, plus
+ extra features and modules such as the Perl module, which allows the
+ addition of Perl in configuration files.
+ .
+ STANDARD HTTP MODULES: Core, Access, Auth Basic, Auto Index, Browser, Empty
+ GIF, FastCGI, Geo, Limit Connections, Limit Requests, Map, Memcached, Proxy,
+ Referer, Rewrite, SCGI, Split Clients, UWSGI.
+ .
+ OPTIONAL HTTP MODULES: Addition, Auth Request, Charset, WebDAV, FLV, GeoIP,
+ Gunzip, Gzip, Gzip Precompression, Headers, HTTP/2, Image Filter, Index, Log,
+ MP4, Embedded Perl, Random Index, Real IP, Slice, Secure Link, SSI, SSL,
+ SSL Preread, Stub Status, Substitution, Thread Pool, Upstream, User ID, XSLT.
+ .
+ OPTIONAL MAIL MODULES: Mail Core, Auth HTTP, Proxy, SSL, IMAP, POP3, SMTP.
+ .
+ OPTIONAL STREAM MODULES: Stream, GeoIP, GeoIP2
+ .
+ THIRD PARTY MODULES: Auth PAM, Cache Purge, DAV Ext, Echo, Fancy Index,
+ GeoIP2, Headers More, Embedded Lua, HTTP Substitutions, Nchan, Upload Progress,
+ Upstream Fair Queue.
+
+Package: nginx-full
+Architecture: all
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 92
+Depends: libnginx-mod-http-auth-pam (>= 1:1.5.3-4~), libnginx-mod-http-dav-ext (>= 1:3.0.0-4~), libnginx-mod-http-echo (>= 1:0.63-5~), libnginx-mod-http-geoip2 (>= 1:3.4-4~), libnginx-mod-http-subs-filter (>= 1:0.6.4-5~), libnginx-mod-http-upstream-fair (>= 1:0.0~git20120408.a18b409-4~), libnginx-mod-stream-geoip2 (>= 1:3.4-4~), nginx (>= 1.24.0-2.1~1.gbp4eef3c), nginx (<< 1.24.0-2.1~1.gbp4eef3c.1~)
+Filename: ./nginx-full_1.24.0-2.1~1.gbp4eef3c_all.deb
+Size: 81920
+MD5sum: e85553db2a8bf6a28142aab474ee0b10
+SHA1: dd3aecdad2ca8c3c12b52d7e72880882b4c47760
+SHA256: d3f9218e6a77c7335806c5b54fa619e2cc6d40bb414f08da4ec7ce086da0334f
+SHA512: 74c933a50da0058aae15e337627b853d8d4bae403eff09682ba6808ce37dae8d5c884bd47fc3ddfbf691c50d15d5228be703041426c65f6ec869ce13da11bd7a
+Homepage: https://nginx.org
+Description: nginx web/proxy server (standard version with 3rd parties)
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This metapackage provides a version of nginx with the complete set of
+ standard modules included (but omitting some of those included in
+ nginx-extras).
+ .
+ STANDARD HTTP MODULES: Core, Access, Auth Basic, Auto Index, Browser, Empty
+ GIF, FastCGI, Geo, Limit Connections, Limit Requests, Map, Memcached, Proxy,
+ Referer, Rewrite, SCGI, Split Clients, UWSGI.
+ .
+ OPTIONAL HTTP MODULES: Addition, Auth Request, Charset, WebDAV, GeoIP, Gunzip,
+ Gzip, Gzip Precompression, Headers, HTTP/2, Image Filter, Index, Log, Real IP,
+ Slice, SSI, SSL, Stream, SSL Preread, Stub Status, Substitution, Thread  Pool,
+ Upstream, User ID, XSLT.
+ .
+ OPTIONAL MAIL MODULES: Mail Core, Auth HTTP, Proxy, SSL, IMAP, POP3, SMTP.
+ .
+ OPTIONAL STREAM MODULES: Stream Core, GeoIP, GeoIP2
+ .
+ THIRD PARTY MODULES: Auth PAM, DAV Ext, Echo, GeoIP2, HTTP Substitutions
+ Upstream Fair Queue.
+
+Package: nginx-light
+Architecture: all
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Source: nginx
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 92
+Depends: libnginx-mod-http-echo (>= 1:0.63-5~), nginx (>= 1.24.0-2.1~1.gbp4eef3c), nginx (<< 1.24.0-2.1~1.gbp4eef3c.1~)
+Filename: ./nginx-light_1.24.0-2.1~1.gbp4eef3c_all.deb
+Size: 81624
+MD5sum: dcf8d679d510d8d4f3abb8c7e28a23d8
+SHA1: a8cb69cc4f1fabacdb2768fd380af55c874c8f7e
+SHA256: f967904d693803cbea93455abb6cc08e1ae3d34b5949985b85ade568b718840e
+SHA512: 0208bc7b0937b0aa6093e92b9a3fd334cb8a094e03f82b6d561cc6eb5b2ff4abc5c08b128614ac83760d451c3a9ee29a9fc0f2978a0305e83424fd2edae4fa37
+Homepage: https://nginx.org
+Description: nginx web/proxy server (basic version)
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+ .
+ This metapackage provides a very light version of nginx with only the
+ minimal set of features and modules.
+ .
+ STANDARD HTTP MODULES: Core, Access, Auth Basic, Auto Index, Empty GIF,
+ FastCGI, Map, Proxy, Rewrite, SCGI, uWSGI.
+ .
+ OPTIONAL HTTP MODULES: Auth Request, Charset, Gzip, Gzip Precompression,
+ Headers, HTTP/2, Index, Log, Real IP, Slice, SSI, SSL, Stub Status, Thread
+ Pool, WebDAV, Upstream.
+ .
+ THIRD PARTY MODULES: Echo.
+
+Package: nginx
+Architecture: amd64
+Version: 1.24.0-2.1~1.gbp4eef3c
+Priority: optional
+Section: httpd
+Maintainer: Debian Nginx Maintainers <pkg-nginx-maintainers@alioth-lists.debian.net>
+Installed-Size: 1344
+Provides: httpd, httpd-cgi, nginx-abi-1.24.0-1
+Depends: libc6 (>= 2.34), libcrypt1 (>= 1:4.1.0), libpcre2-8-0 (>= 10.22), libssl3 (>= 3.3.0-0~1.gbp9f532ba7fd), zlib1g (>= 1:1.1.4), iproute2, nginx-common (= 1.24.0-2.1~1.gbp4eef3c)
+Breaks: nginx-core (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-light (<< 1.22.1-6~)
+Replaces: nginx-core (<< 1.22.1-6~), nginx-extras (<< 1.22.1-6~), nginx-light (<< 1.22.1-6~)
+Filename: ./nginx_1.24.0-2.1~1.gbp4eef3c_amd64.deb
+Size: 534028
+MD5sum: 8d4fef51ab4182f4c384503c42149d72
+SHA1: 1e4caf6d72afb948dd692a5b3404d1da3f71f11f
+SHA256: 816a8357d2059b5bed490e45b32355bebee3287a68353c2bc98ef6de8374def1
+SHA512: 702253f7336a1bf0be4f6c82bc9c414d6bb90e761f090ec639d26e5479b4c5ed6b2023a7ad383e3abb80973b18af1b9a8d21dddef9298bc415f25fd0c4ecad68
+Homepage: https://nginx.org
+Description: small, powerful, scalable web/proxy server
+ Nginx ("engine X") is a high-performance web and reverse proxy server
+ created by Igor Sysoev. It can be used both as a standalone web server
+ and as a proxy to reduce the load on back-end HTTP or mail servers.
+
